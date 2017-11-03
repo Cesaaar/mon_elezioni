@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Monitoraggio Elezioni</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/core.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	
+	<!-- RIVEDERE JAVASCRIPT
+	
+	<script type="text/javascript" src="assets/js/pages/dashboard.js"></script> 
+	<script type="text/javascript" src="assets/js/pages/general_widgets_content.js"></script>-->
+	<script type="text/javascript" src="assets/js/pages/general_widgets_stats.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body class="navbar-bottom">
+
+	<!-- Page header -->
+	<div class="page-header page-header-inverse">
+
+		<!-- Page header content -->
+		<div class="page-header-content">
+			<div class="page-title">
+				<h4>Monitoraggio Elezioni Politiche </h4>
+			</div>
+
+			<div class="heading-elements">
+				<ul class="breadcrumb heading-text">
+					<li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
+					<li class="active">Dashboard</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /page header content -->
+
+
+		<!-- Second navbar -->
+		<div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
+			<ul class="nav navbar-nav visible-xs-block">
+				<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+
+			<div class="navbar-collapse collapse" id="navbar-second-toggle">
+				<ul class="nav navbar-nav navbar-nav-material">
+					<li class="active"><a href="index.html">Dashboard</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /second navbar -->	
+	</div>
+	<!-- /page header -->
+
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+		
+			<!-- Main content -->
+			<div class="content-wrapper">
+			
+			<!-- Main charts -->
+				<div class="row">
+					<div class="col-sm-6 col-lg-3">
+
+						<!-- User card with thumb and social icons at the bottom -->
+						<div class="panel">
+							<div class="panel-body text-center">
+								<a href="#" class="display-inline-block">
+									<img src="assets/images/matteo_renzi_48581.jpg" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
+								</a>
+
+								<h6 class="text-semibold no-margin-bottom">
+									<a href="#" class="text-default">Matteo Renzi</a>
+									<small class="display-block">Partito Democratico</small>
+								</h6>
+							</div>
+						</div>
+						<!-- /user card with thumb and social icons at the bottom -->
+							
+						<!-- Simple statistics -->
+						<div class="panel panel-body panel-body-accent">
+							<div class="media no-margin">
+								<div class="media-left media-middle">
+									<i class="icon-pointer icon-3x text-success-400"></i>
+								</div>
+								<div class="media-body text-right">
+									<h3 class="no-margin text-semibold">1,089,549</h3>
+										<span class="text-uppercase text-size-mini text-muted">Facebook Fans</span>
+								</div>
+							</div>
+						</div>
+						<!-- /Simple statistics -->
+						
+						<!-- Basic area chart -->
+						<div class="panel">
+							<div class="panel-body">
+								<h4>Trend Facebook Fans</h4>
+								<div class="text-muted text-size-small">1,000,000 avg</div>
+							</div>
+
+							<div id="chart_area_basic"></div>
+						</div>
+						<!-- /basic area chart -->
+						
+					</div>
+
+				</div>
+				<!-- /main charts -->
+		
+			</div>
+			<!-- /main content -->
+			
+		</div>
+		<!-- /Page content -->
+
+	</div>
+	<!-- /page container -->
+
+
+	<!-- Footer -->
+	<div class="navbar navbar-default navbar-fixed-bottom footer">
+		<ul class="nav navbar-nav visible-xs-block">
+			<li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
+		</ul>
+
+		<div class="navbar-collapse collapse" id="footer">
+			<div class="navbar-text">
+				&copy; 2018. <a href="#" class="navbar-link">Monitoraggio Elezioni 2018</a> by <a href="http://www.ildatomancante.it" class="navbar-link" target="_blank">Andrea Cesarini</a>
+			</div>
+
+			<div class="navbar-right">
+				<ul class="nav navbar-nav">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contatti</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /footer -->
+
+</body>
+</html>
