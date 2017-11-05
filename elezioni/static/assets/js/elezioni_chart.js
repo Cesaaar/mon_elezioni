@@ -16,6 +16,8 @@ $(function() {
 
     // Initialize chart
     areaChartWidget("#chart_area_card", 50, '#5C6BC0');
+    areaChartWidget("#chart_area_card2", 50, '#5C6BC0');
+    areaChartWidget("#chart_area_card3", 50, '#5C6BC0');
 	
 	  // Chart setup
     function areaChartWidget(element, chartHeight, color) {

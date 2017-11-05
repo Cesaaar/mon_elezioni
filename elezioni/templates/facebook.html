@@ -9,7 +9,8 @@
 			
 			<!-- Main charts -->
 				<div class="row">
-					<div class="col-sm-6 col-lg-3">
+                    <!-- col -->
+					<div class="col-sm-4 col-lg-4">
 
 						<!-- User card with thumb and social icons at the bottom -->
 						<div class="panel">
@@ -47,6 +48,86 @@
 						
 					</div>
 					<!-- /col -->
+                    
+                    <!-- col -->
+                    <div class="col-sm-4 col-lg-4">
+                        
+                        <!-- User card with thumb and social icons at the bottom -->
+                        <div class="panel">
+                            <div class="panel-body text-center">
+                                <a href="#" class="display-inline-block">
+                                    <img src="{{ url_for('static', filename='assets/images/matteo_renzi_48581.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
+                                        </a>
+                                
+                                <h6 class="text-semibold no-margin-bottom">
+                                    <a href="#" class="text-default">Luigi Di Maio</a>
+                                    <small class="display-block">Movimento 5 Stelle</small>
+                                </h6>
+                            </div>
+                        </div>
+                        <!-- /user card with thumb and social icons at the bottom -->
+                        
+                        <!-- Simple statistics -->
+                        <div class="panel panel-body panel-body-accent">
+                            <div class="media no-margin">
+                                <div class="media-left media-middle">
+                                    <i class="icon-users icon-3x text-success-400"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3 class="no-margin text-semibold">{{fb_fans2[0].fb_fans}}</h3>
+                                    <span class="text-uppercase text-size-mini text-muted">Facebook Fans</span>
+                                </div>
+                            </div>
+                            <!-- Basic area chart -->
+                            </br>
+                            <div class="text-muted text-size-small">Trend</div>
+                            <div id="chart_area_card2"></div>
+                            <!-- /basic area chart -->
+                        </div>
+                        <!-- /Simple statistics -->
+                        
+                    </div>
+                    <!-- /col -->
+                    
+                    <!-- col -->
+                    <div class="col-sm-4 col-lg-4">
+                        
+                        <!-- User card with thumb and social icons at the bottom -->
+                        <div class="panel">
+                            <div class="panel-body text-center">
+                                <a href="#" class="display-inline-block">
+                                    <img src="{{ url_for('static', filename='assets/images/matteo_renzi_48581.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
+                                        </a>
+                                
+                                <h6 class="text-semibold no-margin-bottom">
+                                    <a href="#" class="text-default">Matteo Salvini</a>
+                                    <small class="display-block">Lega Nord</small>
+                                </h6>
+                            </div>
+                        </div>
+                        <!-- /user card with thumb and social icons at the bottom -->
+                        
+                        <!-- Simple statistics -->
+                        <div class="panel panel-body panel-body-accent">
+                            <div class="media no-margin">
+                                <div class="media-left media-middle">
+                                    <i class="icon-users icon-3x text-success-400"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3 class="no-margin text-semibold">{{fb_fans3[0].fb_fans}}</h3>
+                                    <span class="text-uppercase text-size-mini text-muted">Facebook Fans</span>
+                                </div>
+                            </div>
+                            <!-- Basic area chart -->
+                            </br>
+                            <div class="text-muted text-size-small">Trend</div>
+                            <div id="chart_area_card3"></div>
+                            <!-- /basic area chart -->
+                        </div>
+                        <!-- /Simple statistics -->
+                        
+                    </div>
+                    <!-- /col -->
 
 				</div>
 				<!-- /main charts -->
