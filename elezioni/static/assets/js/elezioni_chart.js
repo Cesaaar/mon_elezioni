@@ -8,14 +8,13 @@
 *  Latest update: Mar 20, 2017
 *
 * ---------------------------------------------------------------------------- */
-
+console.log("Ricorda di svuotare la cache quando aggiorni static");
 $(function() {
 	
 	 // Messages area chart
     // ------------------------------
-
     // Initialize chart
-    areaChartWidget("#chart_area_card", 50, '#5C6BC0');
+    areaChartWidget("#chart_area_card1", 50, '#5C6BC0');
     areaChartWidget("#chart_area_card2", 50, '#5C6BC0');
     areaChartWidget("#chart_area_card3", 50, '#5C6BC0');
 	
@@ -74,7 +73,8 @@ $(function() {
         // Load data
         // ------------------------------
 		//var site = "{{url_for('static', filename='assets/demo_data/dashboard/monthly_sales.json')}}";
-        d3.json('/static/assets/demo_data/dashboard/monthly_sales.json', function (error, data) {
+          //d3.json('/trend_fb_fans1', function (error, data) {
+  d3.json('/static/assets/demo_data/dashboard/monthly_sales.json', function (error, data) {
 
             // Show what's wrong if error
             if (error) return console.error(error);
@@ -84,7 +84,7 @@ $(function() {
                 d.date = parseDate(d.date);
                 d.value = +d.value;
             });
-
+          
             // Get the maximum value in the given array
             var maxY = d3.max(data, function(d) { return d.value; });
 
