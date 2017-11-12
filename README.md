@@ -4,7 +4,7 @@
 Monitoraggio dei principali partecipanti alle elezioni politiche italiane del 2018.
 
 
-### Per lanciare il servizio ###
+### Per lanciare il servizio in locale ###
 
 ```
 git clone https://github.com/Cesaaar/mon_elezioni.git
@@ -22,7 +22,7 @@ python runserver.py
 - javascript
 - css
 
-### Config.py ###
+### config.py ###
 Il file config.py contiene le diverse configurazioni, in particolare la struttura del database corrisponde a quella realizzata nel repository od_elezioni.
 
 ### Database ###

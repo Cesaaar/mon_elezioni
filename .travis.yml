@@ -4,6 +4,6 @@ python:
 install:
   - pip install -r requirements.txt
 script: 
-  - python runserver.py
+  - python -m py_compile runserver.py
 env:
   - SETTINGS=config.py
