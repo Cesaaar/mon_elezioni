@@ -1,4 +1,6 @@
 # Monitoraggio Elezioni
+[![Build status](https://travis-ci.org/Cesaaar/travis-lab.svg?master)](https://travis-ci.org/Cesaaar)
+
 Monitoraggio dei principali partecipanti alle elezioni politiche italiane del 2018.
 
 
