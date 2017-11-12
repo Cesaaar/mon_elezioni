@@ -5,10 +5,10 @@ Monitoraggio dei principali partecipanti alle elezioni politiche italiane del 20
 ### Per lanciare il servizio ###
 
 ```
-git clone git@github.com:Cesaaar/mon_elezioni.git
+git clone https://github.com/Cesaaar/mon_elezioni.git
 
 source venv/bin/activate
-export SETTINGS=../config.py
+export SETTINGS=~/Documents/opendata/config.py
 python runserver.py
 
 ```
@@ -22,3 +22,7 @@ python runserver.py
 
 ### Config.py ###
 Il file config.py contiene le diverse configurazioni, in particolare la struttura del database corrisponde a quella realizzata nel repository od_elezioni.
+
+### Database ###
+
+- od_elezioni
