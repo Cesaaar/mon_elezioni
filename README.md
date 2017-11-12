@@ -13,7 +13,14 @@ source venv/bin/activate
 export SETTINGS=~/Documents/opendata/config.py
 python runserver.py
 
+or
+
+nohup python runserver.py &
+
 ```
+
+### config.py ###
+Il file config.py contiene le diverse configurazioni, in particolare la struttura del database corrisponde a quella realizzata nel repository od_elezioni.
 
 ### Tecnologie ###
 - python
@@ -21,9 +28,6 @@ python runserver.py
 - html
 - javascript
 - css
-
-### config.py ###
-Il file config.py contiene le diverse configurazioni, in particolare la struttura del database corrisponde a quella realizzata nel repository od_elezioni.
 
 ### Database ###
 
