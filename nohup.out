@@ -78,3 +78,191 @@
 151.25.133.153 - - [05/Nov/2017 21:21:52] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 -
 151.25.133.153 - - [05/Nov/2017 21:21:52] "GET /apple-touch-icon.png HTTP/1.1" 404 -
 151.25.133.153 - - [05/Nov/2017 21:22:43] "GET / HTTP/1.1" 200 -
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+151.25.133.153 - - [05/Nov/2017 22:06:34] "GET / HTTP/1.1" 200 -
+5.170.78.172 - - [06/Nov/2017 07:21:04] "GET /favicon.ico HTTP/1.1" 404 -
+5.97.129.234 - - [06/Nov/2017 09:17:00] "GET / HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:01] "GET /static/assets/css/core.css HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:04] "GET /static/assets/css/components.css HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:12] "GET /static/assets/css/icons/icomoon/styles.css HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:15] "GET /static/assets/js/plugins/loaders/pace.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:15] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:18] "GET /static/assets/css/colors.css HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:19] "GET /static/assets/js/core/libraries/jquery.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:21] "GET /static/assets/js/core/libraries/bootstrap.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:22] "GET /static/assets/js/plugins/ui/nicescroll.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:23] "GET /static/assets/js/plugins/loaders/blockui.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:23] "GET /static/assets/js/plugins/ui/drilldown.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:23] "GET /static/assets/js/plugins/ui/fab.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:23] "GET /static/assets/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:28] "GET /static/assets/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:28] "GET /static/assets/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:28] "GET /static/assets/js/plugins/pickers/daterangepicker.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:30] "GET /static/assets/js/plugins/forms/styling/uniform.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:30] "GET /static/assets/js/plugins/ui/moment/moment.min.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:31] "GET /static/assets/js/elezioni_chart.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:31] "GET /static/assets/js/core/app.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:31] "GET /static/assets/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:32] "GET /static/assets/images/matteo_renzi_48581.jpg HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:34] "GET /static/assets/demo_data/dashboard/monthly_sales.json HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:34] "GET /static/assets/css/icons/icomoon/fonts/icomoon.woff?3p0rtw HTTP/1.1" 200 -
+5.97.129.234 - - [06/Nov/2017 09:17:37] "GET /favicon.ico HTTP/1.1" 404 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET / HTTP/1.1" 200 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/css/icons/icomoon/styles.css HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/css/components.css HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/css/core.css HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/css/colors.css HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/core/libraries/bootstrap.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/loaders/pace.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/core/libraries/jquery.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/ui/fab.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/loaders/blockui.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/ui/nicescroll.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/forms/styling/uniform.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/pickers/daterangepicker.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/ui/moment/moment.min.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/elezioni_chart.js HTTP/1.1" 200 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/core/app.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:30] "GET /static/assets/js/plugins/ui/drilldown.js HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:31] "GET /static/assets/images/matteo_renzi_48581.jpg HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:31] "GET /static/assets/css/icons/icomoon/fonts/icomoon.woff?3p0rtw HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:31] "GET /static/assets/demo_data/dashboard/monthly_sales.json HTTP/1.1" 304 -
+5.170.131.208 - - [06/Nov/2017 13:33:31] "GET /favicon.ico HTTP/1.1" 404 -
+5.97.129.254 - - [06/Nov/2017 14:37:12] "GET /favicon.ico HTTP/1.1" 404 -
+151.25.133.153 - - [06/Nov/2017 21:13:25] "GET / HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:26] "GET / HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:27] "GET /static/assets/css/icons/icomoon/styles.css HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:27] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:27] "GET /static/assets/css/colors.css HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:27] "GET /static/assets/css/components.css HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:27] "GET /static/assets/css/core.css HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:27] "GET /static/assets/js/plugins/loaders/pace.min.js HTTP/1.1" 200 -
+151.25.133.153 - - [06/Nov/2017 21:13:27] "GET /static/assets/js/core/libraries/jquery.min.js HTTP/1.1" 200 -
+91.200.12.179 - - [07/Nov/2017 14:59:22] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+91.200.12.179 - - [07/Nov/2017 14:59:22] "  /*à     Cookie: mstshash=Administr" 400 -
+92.42.109.101 - - [07/Nov/2017 15:27:49] "HEAD / HTTP/1.1" 200 -
+168.1.128.76 - - [08/Nov/2017 06:51:54] "GET / HTTP/1.0" 200 -
+91.200.12.82 - - [08/Nov/2017 13:16:42] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+91.200.12.82 - - [08/Nov/2017 13:16:42] "  /*à     Cookie: mstshash=Administr" 400 -
+77.72.83.111 - - [09/Nov/2017 11:19:16] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+77.72.83.111 - - [09/Nov/2017 11:19:16] "  /*à     Cookie: mstshash=Administr" 400 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/css/icons/icomoon/styles.css HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/css/colors.css HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/loaders/pace.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/css/core.css HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/core/libraries/bootstrap.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/loaders/blockui.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/core/libraries/jquery.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/ui/drilldown.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/ui/nicescroll.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/ui/fab.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/css/components.css HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/forms/styling/uniform.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/ui/moment/moment.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/core/app.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/elezioni_chart.js HTTP/1.1" 200 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/js/plugins/pickers/daterangepicker.js HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/demo_data/dashboard/monthly_sales.json HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/css/icons/icomoon/fonts/icomoon.woff?3p0rtw HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 18:35:27] "GET /static/assets/images/matteo_renzi_48581.jpg HTTP/1.1" 304 -
+151.25.133.153 - - [09/Nov/2017 19:00:28] "GET / HTTP/1.1" 200 -
+202.73.50.82 - - [09/Nov/2017 23:59:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+202.73.50.82 - - [09/Nov/2017 23:59:47] "  +&à     Cookie: mstshash=hello" 400 -
+202.73.50.82 - - [10/Nov/2017 00:58:19] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+202.73.50.82 - - [10/Nov/2017 00:58:19] "  +&à     Cookie: mstshash=hello" 400 -
+31.207.47.17 - - [10/Nov/2017 01:20:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+31.207.47.17 - - [10/Nov/2017 01:20:40] "  *%à     Cookie: mstshash=Test" 400 -
+31.207.47.17 - - [10/Nov/2017 01:20:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+31.207.47.17 - - [10/Nov/2017 01:20:40] "  *%à     Cookie: mstshash=Test" 400 -
+202.73.50.82 - - [10/Nov/2017 01:56:01] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+202.73.50.82 - - [10/Nov/2017 01:56:01] "  +&à     Cookie: mstshash=hello" 400 -
+202.73.50.82 - - [10/Nov/2017 02:53:43] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+202.73.50.82 - - [10/Nov/2017 02:53:43] "  +&à     Cookie: mstshash=hello" 400 -
+181.214.87.6 - - [10/Nov/2017 18:04:38] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'\xe0\x00\x00\x00\x00\x00Cookie:")
+181.214.87.6 - - [10/Nov/2017 18:04:38] "  ,'à     Cookie: mstshash=eltons" 400 -
+196.52.43.61 - - [10/Nov/2017 23:33:19] "GET / HTTP/1.0" 200 -
+23.99.122.165 - - [11/Nov/2017 04:57:14] "GET / HTTP/1.1" 200 -
+23.99.122.165 - - [11/Nov/2017 04:57:15] "OPTIONS / HTTP/1.1" 200 -
+23.99.122.165 - - [11/Nov/2017 04:57:15] "GET /Robots.txt HTTP/1.1" 404 -
+23.99.122.165 - - [11/Nov/2017 04:57:20] "GET /SiteMap.xml HTTP/1.1" 404 -
+23.99.122.165 - - [11/Nov/2017 04:57:24] "POST / HTTP/1.1" 405 -
+89.248.167.131 - - [11/Nov/2017 10:43:53] "GET / HTTP/1.1" 200 -
+89.248.167.131 - - [11/Nov/2017 10:43:59] "GET /favicon.ico HTTP/1.1" 404 -
+185.78.17.19 - - [12/Nov/2017 09:12:53] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:12:53] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:12:56] "GET /static/assets/css/icons/icomoon/styles.css HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:12:56] "GET /static/assets/css/core.css HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:02] "GET /static/assets/css/components.css HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:09] "GET /static/assets/css/colors.css HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:09] "GET /static/assets/js/plugins/loaders/pace.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:09] "GET /static/assets/js/core/libraries/jquery.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:17] "GET /static/assets/js/core/libraries/bootstrap.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:18] "GET /static/assets/js/plugins/loaders/blockui.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:18] "GET /static/assets/js/plugins/ui/nicescroll.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:23] "GET /static/assets/js/plugins/ui/drilldown.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:23] "GET /static/assets/js/plugins/ui/fab.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:23] "GET /static/assets/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:32] "GET /static/assets/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:32] "GET /static/assets/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:33] "GET /static/assets/js/plugins/forms/styling/uniform.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:33] "GET /static/assets/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:36] "GET /static/assets/js/plugins/ui/moment/moment.min.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:39] "GET /static/assets/js/plugins/pickers/daterangepicker.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:44] "GET /static/assets/js/core/app.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:44] "GET /static/assets/js/elezioni_chart.js HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:45] "GET /static/assets/images/matteo_renzi_48581.jpg HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:48] "GET /static/assets/css/icons/icomoon/fonts/icomoon.woff?3p0rtw HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:52] "GET /static/assets/demo_data/dashboard/monthly_sales.json HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:13:53] "GET /favicon.ico HTTP/1.1" 404 -
+185.78.17.19 - - [12/Nov/2017 09:19:30] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:45:10] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:50:10] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:50:10] "GET /static/assets/images/Renzi.jpg HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:50:10] "GET /static/assets/images/Di%20Maio.jpg HTTP/1.1" 404 -
+185.78.17.19 - - [12/Nov/2017 09:50:10] "GET /static/assets/images/Salvini.jpg HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:51:45] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:51:45] "GET /static/assets/images/DiMaio.jpg HTTP/1.1" 404 -
+185.78.17.19 - - [12/Nov/2017 09:51:49] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:51:50] "GET /static/assets/images/DiMaio.jpg HTTP/1.1" 404 -
+185.78.17.19 - - [12/Nov/2017 09:52:53] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:52:53] "GET /static/assets/images/DiMaio.png HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:53:26] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:54:17] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:58:55] "GET / HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:58:56] "GET /static/assets/css/icons/icomoon/styles.css HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:56] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:56] "GET /static/assets/css/colors.css HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:56] "GET /static/assets/css/components.css HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:56] "GET /static/assets/css/core.css HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/core/libraries/jquery.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/loaders/pace.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/core/libraries/bootstrap.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/loaders/blockui.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/ui/drilldown.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/ui/fab.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/ui/nicescroll.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/ui/moment/moment.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:57] "GET /static/assets/js/plugins/forms/styling/uniform.min.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:58] "GET /static/assets/js/plugins/pickers/daterangepicker.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:58] "GET /static/assets/js/core/app.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:58] "GET /static/assets/js/elezioni_chart.js HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:58:59] "GET /static/assets/images/Renzi.jpg HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:58:59] "GET /static/assets/images/DiMaio.png HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:59:04] "GET /static/assets/images/Salvini.jpg HTTP/1.1" 200 -
+185.78.17.19 - - [12/Nov/2017 09:59:04] "GET /static/assets/css/icons/icomoon/fonts/icomoon.woff?3p0rtw HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:59:04] "GET /static/assets/demo_data/dashboard/monthly_sales.json HTTP/1.1" 304 -
+185.78.17.19 - - [12/Nov/2017 09:59:08] "GET /favicon.ico HTTP/1.1" 404 -
