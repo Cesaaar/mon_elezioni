@@ -10,7 +10,7 @@
 			<!-- Main charts -->
 				<div class="row">
                     <!-- col -->
-					<div class="col-sm-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">
 
 						<!-- User card with thumb and social icons at the bottom -->
 						<div class="panel">
@@ -41,16 +41,43 @@
 							<!-- Basic area chart -->
 							</br>
 							<div class="text-muted text-size-small">Trend</div>
-							<div id="chart_area_card1"></div>
+							<div id="monthly-sales-stats1"></div>
 							<!-- /basic area chart -->
 						</div>
 						<!-- /Simple statistics -->
+                        
+                        <!-- Post  -->
+                        <div class="panel panel-flat">
+                            <div class="panel-body">
+                                <h4>
+                                    <P align="right"><span class="text-uppercase text-size-mini text-muted">Last Post</span></P>
+                                </h4>
+                                
+                                <h5 class="text-semibold mb-5">
+                                    <P align="left">{{fb_post[0].msg_post[0:40]}}[...]</P>
+                                </h5>
+                                
+                                <ul class="list-inline list-inline-separate text-muted content-group">
+                                    <li>By <a href="#" class="text-muted">{{fb_post[0].user_post}}</a></li>
+                                    <li>{{fb_post[0].dt_post}}</li>
+                                </ul>
+                                {{fb_post[0].msg_post}}
+                            </div>
+                            <div class="panel-footer panel-footer-condensed">
+                                <div class="heading-elements not-collapsible">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li><p class="text-muted"><i class="icon-heart6 text-size-base text-pink position-left"></i> {{fb_post[0].likes_post}}</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Post  -->
 						
 					</div>
 					<!-- /col -->
                     
                     <!-- col -->
-                    <div class="col-sm-4 col-lg-4">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
                         
                         <!-- User card with thumb and social icons at the bottom -->
                         <div class="panel">
@@ -81,16 +108,43 @@
                             <!-- Basic area chart -->
                             </br>
                             <div class="text-muted text-size-small">Trend</div>
-                            <div id="chart_area_card2"></div>
+                            <div id="monthly-sales-stats2"></div>
                             <!-- /basic area chart -->
                         </div>
                         <!-- /Simple statistics -->
+                        
+                        <!-- Post  -->
+                        <div class="panel panel-flat">
+                            <div class="panel-body">
+                                <h4>
+                                    <P align="right"><span class="text-uppercase text-size-mini text-muted">Last Post</span></P>
+                                </h4>
+                                
+                                <h5 class="text-semibold mb-5">
+                                    <P align="left">{{fb_post2[0].msg_post[0:40]}}[...]</P>
+                                </h5>
+                                
+                                <ul class="list-inline list-inline-separate text-muted content-group">
+                                    <li>By <a href="#" class="text-muted">{{fb_post2[0].user_post}}</a></li>
+                                    <li>{{fb_post2[0].dt_post}}</li>
+                                </ul>
+                                {{fb_post2[0].msg_post}}
+                            </div>
+                            <div class="panel-footer panel-footer-condensed">
+                                <div class="heading-elements not-collapsible">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li><p class="text-muted"><i class="icon-heart6 text-size-base text-pink position-left"></i> {{fb_post2[0].likes_post}}</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Post  -->
                         
                     </div>
                     <!-- /col -->
                     
                     <!-- col -->
-                    <div class="col-sm-4 col-lg-4">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
                         
                         <!-- User card with thumb and social icons at the bottom -->
                         <div class="panel">
@@ -121,10 +175,37 @@
                             <!-- Basic area chart -->
                             </br>
                             <div class="text-muted text-size-small">Trend</div>
-                            <div id="chart_area_card3"></div>
+                            <div id="monthly-sales-stats3"></div>
                             <!-- /basic area chart -->
                         </div>
                         <!-- /Simple statistics -->
+                        
+                        <!-- Post  -->
+                        <div class="panel panel-flat">
+                            <div class="panel-body">
+                                <h4>
+                                    <P align="right"><span class="text-uppercase text-size-mini text-muted">Last Post</span></P>
+                                </h4>
+                                
+                                <h5 class="text-semibold mb-5">
+                                    <P align="left">{{fb_post3[0].msg_post[0:40]}}[...]</P>
+                                </h5>
+                                
+                                <ul class="list-inline list-inline-separate text-muted content-group">
+                                    <li>By <a href="#" class="text-muted">{{fb_post3[0].user_post}}</a></li>
+                                    <li>{{fb_post3[0].dt_post}}</li>
+                                </ul>
+                                {{fb_post3[0].msg_post}}
+                            </div>
+                            <div class="panel-footer panel-footer-condensed">
+                                <div class="heading-elements not-collapsible">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li><p class="text-muted"><i class="icon-heart6 text-size-base text-pink position-left"></i> {{fb_post3[0].likes_post}}</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Post  -->
                         
                     </div>
                     <!-- /col -->
