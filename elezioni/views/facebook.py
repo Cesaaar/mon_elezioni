@@ -78,6 +78,12 @@ def facebook():
     return render_template('facebook.html',fb_fans=fb_fans,fb_fans2=fb_fans2,fb_fans3=fb_fans3,
                            fb_post=fb_post, fb_post2=fb_post2, fb_post3=fb_post3)
 
+# first page
+@app.route('/contatti')
+def contatti():
+    return render_template('contatti.html')
+
+
 # json trend fb fans user 1
 @app.route('/trend_fb_fans1')
 def trend_fb_fans1():
