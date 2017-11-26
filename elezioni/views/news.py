@@ -11,48 +11,17 @@ def news():
                 titolo as titolo
                 ,"desc" as descrizione
                 ,autore as autore
+                ,fonte as fonte
                 ,url as url
                 ,img as img
                 ,"user" as user
-                ,"pubAt" as dt_post
+                ,substring("pubAt" from 12 for 5) as hour_post
+                ,to_char(to_date(substring("pubAt" from 0 for 11),'YYYY-MM-DD'), 'DD Month YYYY') as dt_post
             from ''' + app.config['SCHEMA_ELE'] + '''."news"
-            where "user"=''' "'" + app.config['USER1'] + "'" '''
-            order by "pubAt" desc
-            limit 10;
-    ''')
-    
-    cur2 = engine.execute(
-    '''     select
-            titolo as titolo
-            ,"desc" as descrizione
-            ,autore as autore
-            ,url as url
-            ,img as img
-            ,"user" as user
-            ,"pubAt" as dt_post
-            from ''' + app.config['SCHEMA_ELE'] + '''."news"
-            where "user"=''' "'" + app.config['USER2'] + "'" '''
-            order by "pubAt" desc
-            limit 10;
-    ''')
-    
-    cur3 = engine.execute(
-    '''     select
-                titolo as titolo
-                ,"desc" as descrizione
-                ,autore as autore
-                ,url as url
-                ,img as img
-                ,"user" as user
-                ,"pubAt" as dt_post
-            from ''' + app.config['SCHEMA_ELE'] + '''."news"
-            where "user"=''' "'" + app.config['USER3'] + "'" '''
-            order by "pubAt" desc
+            order by dt_rif desc,"pubAt" desc
             limit 10;
     ''')
     
     news = cur.fetchall()
-    news2 = cur2.fetchall()
-    news3 = cur3.fetchall()
     
-    return render_template('news.html', news=news, news2=news2, news3=news3)
+    return render_template('news.html', news=news)
