@@ -126,7 +126,7 @@ $(function() {
           x.domain(d3.extent(data, function(d, i) { return d.date; }));
           
           // Vertical
-          y.domain([1000000, d3.max( data, function(d) { return d.value; })]);
+          y.domain([980000, d3.max( data, function(d) { return d.value; })]);
           
           
           
