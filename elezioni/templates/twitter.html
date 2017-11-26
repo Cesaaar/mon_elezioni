@@ -20,12 +20,58 @@
 								</a>
 
 								<h6 class="text-semibold no-margin-bottom">
-									<a href="#" class="text-default">Matteo Renzi</a>
+									<a href="https://twitter.com/{{id_user}}" class="text-default" target='_blank'>Matteo Renzi</a>
 									<small class="display-block">Partito Democratico</small>
 								</h6>	
 							</div>
 						</div>
 						<!-- /user card with thumb and social icons at the bottom -->
+                        
+                        <!-- Simple statistics -->
+                        <div class="panel panel-body panel-body-accent">
+                            <div class="media no-margin">
+                                <div class="media-left media-middle">
+                                    <i class="icon-users icon-3x text-success-400"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3 class="no-margin text-semibold">{{tw_fans[0].tw_fans}}</h3>
+                                    <span class="text-uppercase text-size-mini text-muted">Twitter Fans</span>
+                                </div>
+                            </div>
+                            <!-- Basic area chart -->
+                            </br>
+                            <div class="text-muted text-size-small">Trend</div>
+                            <div id="monthly-tw-stats1"></div>
+                            <!-- /basic area chart -->
+                        </div>
+                        <!-- /Simple statistics -->
+                        
+                        <!-- Post  -->
+                        <div class="panel panel-flat">
+                            <div class="panel-body">
+                                <h4>
+                                    <P align="right"><span class="text-uppercase text-size-mini text-muted">Ultimo Tweet</span></P>
+                                </h4>
+                                
+                                <h5 class="text-semibold mb-5">
+                                    <P align="left">{{tw_post[0].msg_post[0:40]}}[...]</P>
+                                </h5>
+                                
+                                <ul class="list-inline list-inline-separate text-muted content-group">
+                                    <li>By <a href="#" class="text-muted">{{tw_post[0].user_post}}</a></li>
+                                    <li>{{tw_post[0].dt_post2}} - {{tw_post[0].hour_post}}</li>
+                                </ul>
+                                {{tw_post[0].msg_post}}
+                            </div>
+                            <div class="panel-footer panel-footer-condensed">
+                                <div class="heading-elements not-collapsible">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li><p class="text-muted"><i class="icon-heart6 text-size-base text-pink position-left"></i> {{tw_post[0].likes_post}}</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Post  -->
 							
 					</div>
 					<!-- /col -->
@@ -41,12 +87,58 @@
                                         </a>
                                 
                                 <h6 class="text-semibold no-margin-bottom">
-                                    <a href="#" class="text-default">Luigi Di Maio</a>
+                                    <a href="https://twitter.com/{{id_user2}}" class="text-default" target='_blank'>Luigi Di Maio</a>
                                     <small class="display-block">Movimento 5 Stelle</small>
                                 </h6>
                             </div>
                         </div>
                         <!-- /user card with thumb and social icons at the bottom -->
+                        
+                        <!-- Simple statistics -->
+                        <div class="panel panel-body panel-body-accent">
+                            <div class="media no-margin">
+                                <div class="media-left media-middle">
+                                    <i class="icon-users icon-3x text-success-400"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3 class="no-margin text-semibold">{{tw_fans2[0].tw_fans}}</h3>
+                                    <span class="text-uppercase text-size-mini text-muted">Twitter Fans</span>
+                                </div>
+                            </div>
+                            <!-- Basic area chart -->
+                            </br>
+                            <div class="text-muted text-size-small">Trend</div>
+                            <div id="monthly-tw-stats2"></div>
+                            <!-- /basic area chart -->
+                        </div>
+                        <!-- /Simple statistics -->
+                        
+                        <!-- Post  -->
+                        <div class="panel panel-flat">
+                            <div class="panel-body">
+                                <h4>
+                                    <P align="right"><span class="text-uppercase text-size-mini text-muted">Ultimo Tweet</span></P>
+                                </h4>
+                                
+                                <h5 class="text-semibold mb-5">
+                                    <P align="left">{{tw_post2[0].msg_post[0:40]}}[...]</P>
+                                </h5>
+                                
+                                <ul class="list-inline list-inline-separate text-muted content-group">
+                                    <li>By <a href="#" class="text-muted">{{tw_post2[0].user_post}}</a></li>
+                                    <li>{{tw_post2[0].dt_post2}} - {{tw_post2[0].hour_post}}</li>
+                                </ul>
+                                {{tw_post2[0].msg_post}}
+                            </div>
+                            <div class="panel-footer panel-footer-condensed">
+                                <div class="heading-elements not-collapsible">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li><p class="text-muted"><i class="icon-heart6 text-size-base text-pink position-left"></i> {{tw_post2[0].likes_post}}</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Post  -->
                     
                         
                     </div>
@@ -59,16 +151,62 @@
                         <div class="panel">
                             <div class="panel-body text-center">
                                 <a href="#" class="display-inline-block">
-                                    <img src="{{ url_for('static', filename='assets/images/Salvini.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
+                                    <img src="{{ url_for('static', filename='assets/images/Silvio.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
                                         </a>
                                 
                                 <h6 class="text-semibold no-margin-bottom">
-                                    <a href="#" class="text-default">Matteo Salvini</a>
-                                    <small class="display-block">Lega Nord</small>
+                                    <a href="https://twitter.com/{{id_user3}}" class="text-default" target='_blank'>Silvio Berlusconi</a>
+                                    <small class="display-block">Forza Italia</small>
                                 </h6>
                             </div>
                         </div>
                         <!-- /user card with thumb and social icons at the bottom -->
+                        
+                        <!-- Simple statistics -->
+                        <div class="panel panel-body panel-body-accent">
+                            <div class="media no-margin">
+                                <div class="media-left media-middle">
+                                    <i class="icon-users icon-3x text-success-400"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3 class="no-margin text-semibold">{{tw_fans3[0].tw_fans}}</h3>
+                                    <span class="text-uppercase text-size-mini text-muted">Twitter Fans</span>
+                                </div>
+                            </div>
+                            <!-- Basic area chart -->
+                            </br>
+                            <div class="text-muted text-size-small">Trend</div>
+                            <div id="monthly-tw-stats3"></div>
+                            <!-- /basic area chart -->
+                        </div>
+                        <!-- /Simple statistics -->
+                        
+                        <!-- Post  -->
+                        <div class="panel panel-flat">
+                            <div class="panel-body">
+                                <h4>
+                                    <P align="right"><span class="text-uppercase text-size-mini text-muted">Ultimo Tweet</span></P>
+                                </h4>
+                                
+                                <h5 class="text-semibold mb-5">
+                                    <P align="left">{{tw_post3[0].msg_post[0:40]}}[...]</P>
+                                </h5>
+                                
+                                <ul class="list-inline list-inline-separate text-muted content-group">
+                                    <li>By <a href="#" class="text-muted">{{tw_post3[0].user_post}}</a></li>
+                                    <li>{{tw_post3[0].dt_post2}} - {{tw_post3[0].hour_post}}</li>
+                                </ul>
+                                {{tw_post3[0].msg_post}}
+                            </div>
+                            <div class="panel-footer panel-footer-condensed">
+                                <div class="heading-elements not-collapsible">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li><p class="text-muted"><i class="icon-heart6 text-size-base text-pink position-left"></i> {{tw_post3[0].likes_post}}</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Post  -->
                         
                         
                     </div>

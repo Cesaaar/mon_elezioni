@@ -17,6 +17,10 @@ $(function() {
     monthlySalesArea("#monthly-sales-stats1", 100, '#4DB6AC','trend_fb_fans1'); // initialize chart
     monthlySalesArea("#monthly-sales-stats2", 100, '#4DB6AC','trend_fb_fans2'); // initialize chart
     monthlySalesArea("#monthly-sales-stats3", 100, '#4DB6AC','trend_fb_fans3'); // initialize chart
+  
+    monthlySalesArea("#monthly-tw-stats1", 100, '#4DB6AC','trend_tw_fans1'); // initialize chart
+    monthlySalesArea("#monthly-tw-stats2", 100, '#4DB6AC','trend_tw_fans2'); // initialize chart
+    monthlySalesArea("#monthly-tw-stats3", 100, '#4DB6AC','trend_tw_fans3'); // initialize chart
 	
   
   // Monthly app sales area chart
@@ -125,8 +129,11 @@ $(function() {
           // Horizontal
           x.domain(d3.extent(data, function(d, i) { return d.date; }));
           
+          input_min_vertical = d3.min( data, function(d) { return d.value; });
+          input_max_vertical = d3.max( data, function(d) { return d.value; });
+          input_med_vertical = (input_max_vertical + input_min_vertical)/2;
           // Vertical
-          y.domain([980000, d3.max( data, function(d) { return d.value; })]);
+          y.domain([input_min_vertical,input_max_vertical ]);
           
           
           
