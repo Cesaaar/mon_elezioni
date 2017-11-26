@@ -20,6 +20,10 @@ or
 
 nohup python runserver.py &
 
+or
+
+gunicorn -c config_gunicorn.py elezioni:app
+
 ```
 
 ### config.py ###
