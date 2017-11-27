@@ -4,7 +4,7 @@ from flask import jsonify
 import json
 
 # first page
-@app.route('/')
+@app.route('/facebook')
 def facebook():
     engine = get_db()
     cur = engine.execute(
@@ -84,11 +84,6 @@ def facebook():
     return render_template('facebook.html',fb_fans=fb_fans,fb_fans2=fb_fans2,fb_fans3=fb_fans3,
                            fb_post=fb_post, fb_post2=fb_post2, fb_post3=fb_post3, id_user=id_user,
                            id_user2=id_user2, id_user3=id_user3)
-
-# first page
-@app.route('/contatti')
-def contatti():
-    return render_template('contatti.html')
 
 
 # json trend fb fans user 1

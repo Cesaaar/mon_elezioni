@@ -73,7 +73,7 @@
 
 			<div class="heading-elements">
 				<ul class="breadcrumb heading-text">
-					<li><a href="{{ url_for('facebook') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+					<li><a href="{{ url_for('home') }}"><i class="icon-home2 position-left"></i> Home</a></li>
 					<li class="active" id="link_home"></li>
 				</ul>
 			</div>
@@ -89,10 +89,10 @@
 
 			<div class="navbar-collapse collapse" id="navbar-second-toggle">
 				<ul class="nav navbar-nav navbar-nav-material">
+                    <li id="link0"><a href="{{ url_for('home')}}">Timeline</a></li>
 					<li id="link1"><a href="{{ url_for('facebook')}}">Facebook</a></li>
                     <li id="link2"><a href="{{ url_for('twitter')}}">Twitter</a></li>
                     <li id="link3"><a href="{{ url_for('news')}}">News</a></li>
-                    <li id="link4"><a href="{{ url_for('youtube')}}">YouTube</a></li>
 				</ul>
 			</div>
 		</div>
@@ -123,6 +123,7 @@
 
 			<div class="navbar-right">
 				<ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('about')}}">About</a></li>
 					<li><a href="{{ url_for('contatti')}}">Contatti</a></li>
 				</ul>
 			</div>

@@ -44,7 +44,7 @@ def twitter():
             ,msg as msg_post
             from ''' + app.config['SCHEMA_ELE'] + '''."tw_posts"
             where "user"=''' "'" + app.config['USER1'] + "'" '''
-            order by dt_post desc
+            order by dt_rif desc
             limit 1;
     ''')
     
@@ -57,7 +57,7 @@ def twitter():
                 ,msg as msg_post
             from ''' + app.config['SCHEMA_ELE'] + '''."tw_posts"
             where "user"=''' "'" + app.config['USER2'] + "'" '''
-            order by dt_post desc
+            order by dt_rif desc
             limit 1;
     ''')
     
@@ -70,7 +70,7 @@ def twitter():
                 ,msg as msg_post
             from ''' + app.config['SCHEMA_ELE'] + '''."tw_posts"
             where "user"=''' "'" + app.config['USER3'] + "'" '''
-            order by dt_post desc
+            order by dt_rif desc
             limit 1;
     ''')
     

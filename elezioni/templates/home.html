@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block body %}
+
+		<!-- Page content -->
+		<div class="page-content">
+		
+			<!-- Main content -->
+			<div class="content-wrapper">
+			
+            <!-- Timeline -->
+            <div class="timeline timeline-center">
+                <div class="timeline-container">
+                    
+                    {% for t in timeline %}
+                        <!-- Blog post -->
+                        {% if loop.index%2!=0 %}
+                        <div class="timeline-row">
+                        {% else %}
+                        <div class="timeline-row post-even">
+                        {% endif %}
+                        <div class="timeline-icon">
+                                {% if t.sorgente=='twitter' %}
+                                <div class="bg-primary-400">
+                                    <i class="icon-twitter2"></i>
+                                {% elif t.sorgente=='facebook' %}
+                                <div class="bg-success-400">
+                                    <i class=" icon-facebook2"></i>
+                                {% else %}
+                                <div class="bg-info-400">
+                                    <i class="icon-feed3"></i>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-time">
+                            {% if t.sorgente=='twitter'%}
+                            <strong>{{t.utente}}</strong> ha aggiunto un nuovo tweet
+                            {% elif t.sorgente=='facebook' %}
+                            <strong>{{t.utente}}</strong> ha aggiunto un nuovo post
+                            {% else %}
+                            nuova <strong>news</strong>
+                            {% endif %}
+                            <span class="text-muted">{{t.dt_post|strftime}}</span>
+                        </div>
+                        
+                        <div class="panel panel-flat timeline-content">
+                            <div class="panel-body">
+                                <blockquote>
+                                    <p>{{t.msg[0:250]}}</p>
+                                </blockquote>
+                            </div>
+                            
+                            <div class="panel-footer panel-footer-transparent">
+                                <div class="heading-elements">
+                                    <span class="heading-btn pull-right">
+                                        {% if t.sorgente=='twitter'%}
+                                        <a href="{{ url_for('twitter')}}" class="btn btn-link">vai ai tweet <i class="icon-arrow-right14 position-right"></i></a>
+                                        {% elif t.sorgente=='facebook'%}
+                                        <a href="{{ url_for('facebook')}}" class="btn btn-link">vai ai post <i class="icon-arrow-right14 position-right"></i></a>
+                                        {% else %}
+                                        <a href="{{ url_for('news')}}" class="btn btn-link">vai alle news <i class="icon-arrow-right14 position-right"></i></a>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /blog post -->
+                    {% endfor %}
+                    
+                </div>
+            </div>
+				
+		
+			</div>
+			<!-- /main content -->
+			
+		</div>
+		<!-- /Page content -->
+
+    <script>
+    document.getElementById("link0").setAttribute('class', "active");
+    document.getElementById("link_home").innerHTML = "Timeline";
+    </script>
+
+
+{% endblock %}

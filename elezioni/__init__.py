@@ -1,4 +1,7 @@
 # import
+import datetime
+import dateutil
+import dateutil.parser
 from flask import Flask, g, url_for, render_template
 from sqlalchemy import create_engine
 
@@ -27,9 +30,19 @@ def close_db(error):
 		g.postgres.dispose()
 
 ''' VISTE '''
+from elezioni.views import home
 from elezioni.views import facebook
 from elezioni.views import twitter
 from elezioni.views import news
 from elezioni.views import youtube
+
+""" UTILS """
+
+@app.template_filter('strftime')
+def _jinja2_filter_datetime(date, fmt=None):
+    date = dateutil.parser.parse(date)
+    native = date.replace(tzinfo=None)
+    format='%d %b %Y, %-H:%-M'
+    return native.strftime(format)
 
 
