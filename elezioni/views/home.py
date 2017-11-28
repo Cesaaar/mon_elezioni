@@ -9,14 +9,15 @@ def home():
     engine = get_db()
     
     cur = engine.execute(
-    '''     select
+    '''     select distinct
                 dt as dt_post
                 ,sorgente as sorgente
                 ,msg as msg
                 ,"user" as utente
             from ''' + app.config['SCHEMA_ELE'] + '''."timeline"
-            where dt_rif = (select max(dt_rif) from ''' + app.config['SCHEMA_ELE'] + '''."timeline")
-            order by dt desc;
+            where sorgente != 'news'
+            order by dt desc
+            limit 20;
     ''')
     
     timeline = cur.fetchall()
