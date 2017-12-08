@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/core.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/components.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/colors.css') }}">
+        
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}"/>
+    
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
@@ -41,8 +44,11 @@
     <script  type="text/javascript" src="{{ url_for('static', filename='assets/js/plugins/ui/moment/moment.min.js') }}"></script>
     <script  type="text/javascript" src="{{ url_for('static', filename='assets/js/plugins/pickers/daterangepicker.js') }}"></script>
     <script  type="text/javascript" src="{{ url_for('static', filename='assets/js/core/app.js') }}"></script>
+   
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/plugins/maps/jvectormap/jvectormap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/plugins/maps/jvectormap/map_files/italy_prov.js') }}"></script>
     
-    <script  type="text/javascript" src="{{ url_for('static', filename='assets/js/elezioni_chart.js') }}"></script>
+    
 	<!-- /theme JS files -->
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -73,7 +79,7 @@
 		<!-- Page header content -->
 		<div class="page-header-content">
 			<div class="page-title">
-				<h4>Monitoraggio Elezioni Politiche </h4>
+				<h4>Monitoraggio Elezioni Politiche 2018</h4>
 			</div>
 
 			<div class="heading-elements">
@@ -94,10 +100,11 @@
 
 			<div class="navbar-collapse collapse" id="navbar-second-toggle">
 				<ul class="nav navbar-nav navbar-nav-material">
-                    <li id="link0"><a href="{{ url_for('home')}}">Timeline</a></li>
+                    <li id="link0"><a href="{{ url_for('home')}}">Timeline Social</a></li>
+                    <li id="link4"><a href="{{ url_for('mappe')}}">Luoghi</a></li>
+                    <li id="link3"><a href="{{ url_for('news')}}">News</a></li>
 					<li id="link1"><a href="{{ url_for('facebook')}}">Facebook</a></li>
                     <li id="link2"><a href="{{ url_for('twitter')}}">Twitter</a></li>
-                    <li id="link3"><a href="{{ url_for('news')}}">News</a></li>
 				</ul>
 			</div>
 		</div>

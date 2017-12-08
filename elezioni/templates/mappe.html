@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block body %}
+
+		<!-- Page content -->
+		<div class="page-content">
+		
+			<!-- Main content -->
+			<div class="content-wrapper">
+                
+            <div class="row">
+                <!-- World map -->
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Il treno del PD</h5>
+                        </div>
+                        <div class="panel-body">
+                            <div class="map-container map-world-1"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- /world map -->
+                    
+                    <!-- World map -->
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">Il rally del M5S</h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="map-container map-world-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /world map -->
+                    
+                    <!-- World map -->
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">La campagna di Forza Italia</h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="map-container map-world-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /world map -->
+            </div>
+		
+			</div>
+			<!-- /main content -->
+			
+		</div>
+		<!-- /Page content -->
+
+    <script>
+    document.getElementById("link4").setAttribute('class', "active");
+    document.getElementById("link_home").innerHTML = "Luoghi";
+    </script>
+
+   <script type="text/javascript"  src="{{ url_for('static', filename='assets/js/elezioni_maps.js') }}"></script>
+
+{% endblock %}
+
+
