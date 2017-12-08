@@ -52,12 +52,12 @@ $(function() {
                 fill: '#93D389'
             }
         },
-        markerStyle: {
-            initial: {
-                fill: '#F8E23B',
-                stroke: '#383f47'
-            }
-        },
+                                markerStyle: {
+                                initial: {
+                                fill: 'red',
+                                stroke: '#383f47'
+                                }
+                                },
         markers: []
     });
             
@@ -99,10 +99,18 @@ $(function() {
         initial: {
             fill: '#93D389'
         }
-        }
+        },
+                              markerStyle: {
+                              initial: {
+                              fill: 'black',
+                              stroke: '#383f47'
+                              }
+                              },
+                              markers: []
     });
             // Aggiungo i Markers Dinamicamente
             var map=$('.map-world-3').vectorMap('get','mapObject');
             addMarkers(data,map);
     });
+  
 });
