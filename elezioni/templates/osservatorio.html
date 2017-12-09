@@ -11,8 +11,7 @@
                     <div class="panel-body">
                         <h4 class="text-center content-group-lg">
                             Osservatorio
-                            <small class="display-block">L'osservatorio raccoglie le principali informazioni provenienti dal web e dal mondo social e le espone attraverso
-                            degli indicatori</small>
+                            <small class="display-block">L'osservatorio raccoglie le principali informazioni provenienti dal web e dal mondo social relative alle <strong>elezioni politiche</strong> e le espone attraverso degli indicatori sintetici</small>
                         </h4>
                     </div>
                 </div>
@@ -20,67 +19,118 @@
 			<!-- Main charts -->
             <div class="row">
                 
-                <!-- col Renzi -->
+                <!-- col -->
+                {% for u in user %}
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <!-- User card with thumb and social icons at the bottom -->
                     <div class="panel">
                         <div class="panel-body text-center">
+                            {% if u=='Renzi' %}
                             <span class="display-inline-block">
                                 <img src="{{ url_for('static', filename='assets/images/Renzi.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
-                                    </span>
-                            
+                            </span>
                             <h6 class="text-semibold no-margin-bottom">
                                 <span class="text-default">Matteo Renzi</span>
                                 <small class="display-block">Partito Democratico</small>
                             </h6>
-                        </div>
-                    </div>
-                    <!-- /user card with thumb and social icons at the bottom -->
-                </div>
-                <!-- \col Renzi-->
-                
-                <!-- col Di Maio -->
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    
-                    <!-- User card with thumb and social icons at the bottom -->
-                    <div class="panel">
-                        <div class="panel-body text-center">
+                            {% elif u=='Di Maio' %}
                             <span class="display-inline-block">
                                 <img src="{{ url_for('static', filename='assets/images/DiMaio.png') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
-                                    </span>
-                            
+                            </span>
                             <h6 class="text-semibold no-margin-bottom">
                                 <span class="text-default" target='_blank'>Luigi Di Maio</span>
                                 <small class="display-block">Movimento 5 Stelle</small>
                             </h6>
-                        </div>
-                    </div>
-                    <!-- /user card with thumb and social icons at the bottom -->
-                    
-                </div>
-                <!-- \col Di Maio-->
-                
-                <!-- col Berlusconi -->
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    
-                    <!-- User card with thumb and social icons at the bottom -->
-                    <div class="panel">
-                        <div class="panel-body text-center">
+                            {% elif u=='Berlusconi' %}
                             <span class="display-inline-block">
                                 <img src="{{ url_for('static', filename='assets/images/Silvio.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
-                                    </span>
-                            
+                            </span>
                             <h6 class="text-semibold no-margin-bottom">
                                 <span class="text-default" target='_blank'>Silvio Berlusconi</span>
                                 <small class="display-block">Forza Italia</small>
                             </h6>
+                            {% endif %}
                         </div>
                     </div>
                     <!-- /user card with thumb and social icons at the bottom -->
                     
+                    <!-- Simple statistics Facebook -->
+                    <div class="panel panel-body panel-body-accent">
+                        <div class="media no-margin">
+                            <div class="media-left media-middle">
+                                {% if u=='Renzi' %}
+                                <a href="https://www.facebook.com/{{id_user1_fb}}" target='_blank'><i class="icon-facebook2 icon-2x text-primary"></i></a>
+                                {% elif u=='Di Maio' %}
+                                <a href="https://www.facebook.com/{{id_user2_fb}}" target='_blank'><i class="icon-facebook2 icon-2x text-primary"></i></a>
+                                {% elif u=='Berlusconi' %}
+                                <a href="https://www.facebook.com/{{id_user3_fb}}" target='_blank'><i class="icon-facebook2 icon-2x text-primary"></i></a>
+                                {% endif %}
+                            </div>
+                            <div class="media-body text-right">
+                                {% if u=='Renzi' %}
+                                <h3 class="no-margin text-semibold">{{fb_fans[0].fb_fans}}</h3>
+                                {% elif u=='Di Maio' %}
+                                <h3 class="no-margin text-semibold">{{fb_fans2[0].fb_fans}}</h3>
+                                {% elif u=='Berlusconi' %}
+                                <h3 class="no-margin text-semibold">{{fb_fans3[0].fb_fans}}</h3>
+                                {% endif %}
+                                <span class="text-uppercase text-size-mini text-muted">Facebook Fans</span>
+                            </div>
+                        </div>
+                        <!-- Basic area chart -->
+                        </br>
+                        <div class="text-muted text-size-small">Trend Facebook Fans</div>
+                        {% if u=='Renzi' %}
+                        <div id="monthly-sales-stats1"></div>
+                        {% elif u=='Di Maio' %}
+                        <div id="monthly-sales-stats2"></div>
+                        {% elif u=='Berlusconi' %}
+                        <div id="monthly-sales-stats3"></div>
+                        {% endif %}
+                        <!-- /basic area chart -->
+                    </div>
+                    <!-- /Simple statistics Facebook-->
+                    
+                    <!-- Simple statistics Twitter-->
+                    <div class="panel panel-body panel-body-accent">
+                        <div class="media no-margin">
+                            <div class="media-left media-middle">
+                                {% if u=='Renzi' %}
+                                <a href="https://twitter.com/{{id_user1_tw}}" target='_blank'><i class="icon-twitter2 icon-2x text-primary"></i></a>
+                                {% elif u=='Di Maio' %}
+                                <a href="https://twitter.com/{{id_user2_tw}}" target='_blank'><i class="icon-twitter2 icon-2x text-primary"></i></a>
+                                {% elif u=='Berlusconi' %}
+                                <a href="https://twitter.com/{{id_user3_tw}}" target='_blank'><i class="icon-twitter2 icon-2x text-primary"></i></a>
+                                {% endif %}
+                            </div>
+                            <div class="media-body text-right">
+                                {% if u=='Renzi' %}
+                                <h3 class="no-margin text-semibold">{{tw_fans[0].tw_fans}}</h3>
+                                {% elif u=='Di Maio' %}
+                                <h3 class="no-margin text-semibold">{{tw_fans2[0].tw_fans}}</h3>
+                                {% elif u=='Berlusconi' %}
+                                <h3 class="no-margin text-semibold">{{tw_fans3[0].tw_fans}}</h3>
+                                {% endif %}
+                                <span class="text-uppercase text-size-mini text-muted">Twitter Fans</span>
+                            </div>
+                        </div>
+                        <!-- Basic area chart -->
+                        </br>
+                        <div class="text-muted text-size-small">Trend Twitter Fans</div>
+                        {% if u=='Renzi' %}
+                        <div id="monthly-tw-stats1"></div>
+                        {% elif u=='Di Maio' %}
+                        <div id="monthly-tw-stats2"></div>
+                        {% elif u=='Berlusconi' %}
+                        <div id="monthly-tw-stats3"></div>
+                        {% endif %}
+                        <!-- /basic area chart -->
+                    </div>
+                    <!-- /Simple statistics Twitter-->
+                    
                 </div>
-                <!-- \col Berlusconi-->
-            
+                {% endfor %}
+                <!-- \col-->
             </div>
             <!-- /main charts -->
 		
@@ -94,5 +144,7 @@
     document.getElementById("link5").setAttribute('class', "active");
     document.getElementById("link_home").innerHTML = "Osservatorio";
     </script>
+
+    <script  type="text/javascript" src="{{ url_for('static', filename='assets/js/elezioni_chart.js') }}"></script>
 
 {% endblock %}

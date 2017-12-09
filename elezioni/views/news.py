@@ -7,17 +7,20 @@ def news():
     engine = get_db()
     
     cur = engine.execute(
-    '''     select
+    '''     select distinct
                 titolo as titolo
                 ,"desc" as descrizione
                 ,autore as autore
                 ,fonte as fonte
                 ,url as url
                 ,img as img
-                ,"user" as user
                 ,substring("pubAt" from 12 for 5) as hour_post
                 ,to_char(to_date(substring("pubAt" from 0 for 11),'YYYY-MM-DD'), 'DD Month YYYY') as dt_post
+                ,max(dt_rif) as dt_rif
+                ,max("pubAt") as "pubAt"
             from ''' + app.config['SCHEMA_ELE'] + '''."news"
+            group by titolo, "desc",autore, fonte, url, img, substring("pubAt" from 12 for 5),
+            to_char(to_date(substring("pubAt" from 0 for 11),'YYYY-MM-DD'), 'DD Month YYYY')
             order by dt_rif desc,"pubAt" desc
             limit 18;
     ''')
