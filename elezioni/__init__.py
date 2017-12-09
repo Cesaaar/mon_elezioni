@@ -36,6 +36,7 @@ from elezioni.views import twitter
 from elezioni.views import news
 from elezioni.views import youtube
 from elezioni.views import mappe
+from elezioni.views import osservatorio
 
 """ UTILS """
 

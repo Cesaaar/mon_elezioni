@@ -28,38 +28,46 @@
 </url>
 
 <url>
-    <loc>http://www.monitoraggioelezioni.it/facebook</loc>
-    <lastmod>2017-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-</url>
-
-<url>
-    <loc>http://www.monitoraggioelezioni.it/twitter</loc>
-    <lastmod>2017-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-</url>
-
-<url>
-    <loc>http://www.monitoraggioelezioni.it/news</loc>
+    <loc>http://www.monitoraggioelezioni.it/osservatorio</loc>
     <lastmod>2017-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
 </url>
 
 <url>
+    <loc>http://www.monitoraggioelezioni.it/news</loc>
+    <lastmod>2017-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
     <loc>http://www.monitoraggioelezioni.it/about</loc>
     <lastmod>2017-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
 </url>
 
 <url>
     <loc>http://www.monitoraggioelezioni.it/contatti</loc>
     <lastmod>2017-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
 </url>
+
+<url>
+    <loc>http://www.monitoraggioelezioni.it/facebook</loc>
+    <lastmod>2017-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>http://www.monitoraggioelezioni.it/twitter</loc>
+    <lastmod>2017-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+</url>
+
 
 </urlset>

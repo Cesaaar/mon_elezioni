@@ -6,6 +6,16 @@
 		
 			<!-- Main content -->
 			<div class="content-wrapper">
+            
+            <div class="panel">
+                <div class="panel-body">
+                    <h4 class="text-center content-group-lg">
+                        Timeline Social
+                        <small class="display-block">La timeline social mostra, in ordine cronologico, gli ultimi post Facebook e Twitter dei principali
+                        candidati in corsa alle elezioni politiche 2018</small>
+                    </h4>
+                </div>
+            </div>
 			
             <!-- Timeline -->
             <div class="timeline timeline-center">
@@ -19,17 +29,13 @@
                         <div class="timeline-row post-even">
                         {% endif %}
                         <div class="timeline-icon">
-                                {% if t.sorgente=='twitter' %}
-                                <div class="bg-primary-400">
-                                    <i class="icon-twitter2"></i>
-                                {% elif t.sorgente=='facebook' %}
-                                <div class="bg-success-400">
-                                    <i class=" icon-facebook2"></i>
-                                {% else %}
-                                <div class="bg-info-400">
-                                    <i class="icon-feed3"></i>
-                                {% endif %}
-                            </div>
+                            {% if t.utente=='Berlusconi' %}
+                            <img src="{{ url_for('static', filename='assets/images/Silvio.jpg') }}" alt="">
+                            {% elif t.utente=='Renzi' %}
+                            <img src="{{ url_for('static', filename='assets/images/Renzi.jpg') }}" alt="">
+                            {% elif t.utente=='Di Maio' %}
+                            <img src="{{ url_for('static', filename='assets/images/DiMaio.png') }}" alt="">
+                            {% endif %}
                         </div>
                         
                         <div class="timeline-time">
@@ -44,6 +50,18 @@
                         </div>
                         
                         <div class="panel panel-flat timeline-content">
+                            <div class="panel-heading">
+                                <h6 class="panel-title">{{t.utente}}</h6>
+                                <div class="heading-elements not-collapsible">
+                                    {% if t.sorgente=='twitter'%}
+                                    <span class="heading-text"><i class="icon-twitter2 position-left text-primary"></i>{{t.dt_post|strftime}}</span>
+                                    {% elif t.sorgente=='facebook' %}
+                                    <span class="heading-text"><i class="icon-facebook2 position-left text-primary"></i>{{t.dt_post|strftime}}</span>
+                                    {% elif t.sorgente=='news' %}
+                                     <span class="heading-text"><i class="icon-feed3 position-left text-primary"></i>{{t.dt_post|strftime}}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
                             <div class="panel-body">
                                 <blockquote>
                                     <p>{{t.msg[0:250]}}</p>
@@ -51,12 +69,29 @@
                             </div>
                             
                             <div class="panel-footer panel-footer-transparent">
-                                <div class="heading-elements">
+                                <div class="heading-elements not-collapsible">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li>
+                                        <i class="icon-heart6 text-size-base text-pink position-left"></i>{{t.likes}}
+                                        </li>
+                                    </ul>
                                     <span class="heading-btn pull-right">
                                         {% if t.sorgente=='twitter'%}
-                                        <a href="{{ url_for('twitter')}}" class="btn btn-link">vai ai tweet <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% if t.utente=='Berlusconi' %}
+                                            <a href="https://twitter.com/{{id_user3_tw}}" target='_blank' class="btn btn-link">vai al tweet <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% elif t.utente=='Di Maio' %}
+                                            <a href="https://twitter.com/{{id_user2_tw}}" target='_blank' class="btn btn-link">vai al tweet <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% elif t.utente=='Renzi' %}
+                                            <a href="https://twitter.com/{{id_user1_tw}}" target='_blank' class="btn btn-link">vai al tweet <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% endif %}
                                         {% elif t.sorgente=='facebook'%}
-                                        <a href="{{ url_for('facebook')}}" class="btn btn-link">vai ai post <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% if t.utente=='Berlusconi' %}
+                                            <a href="https://www.facebook.com/{{id_user3_fb}}" target='_blank' class="btn btn-link">vai al post <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% elif t.utente=='Di Maio' %}
+                                            <a href="https://www.facebook.com/{{id_user2_fb}}" target='_blank' class="btn btn-link">vai al post <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% elif t.utente=='Renzi' %}
+                                            <a href="https://www.facebook.com/{{id_user1_fb}}" target='_blank' class="btn btn-link">vai al tweet <i class="icon-arrow-right14 position-right"></i></a>
+                                            {% endif %}
                                         {% else %}
                                         <a href="{{ url_for('news')}}" class="btn btn-link">vai alle news <i class="icon-arrow-right14 position-right"></i></a>
                                         {% endif %}

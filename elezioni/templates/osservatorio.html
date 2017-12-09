@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block body %}
+
+		<!-- Page content -->
+		<div class="page-content">
+		
+			<!-- Main content -->
+			<div class="content-wrapper">
+                
+                <div class="panel">
+                    <div class="panel-body">
+                        <h4 class="text-center content-group-lg">
+                            Osservatorio
+                            <small class="display-block">L'osservatorio raccoglie le principali informazioni provenienti dal web e dal mondo social e le espone attraverso
+                            degli indicatori</small>
+                        </h4>
+                    </div>
+                </div>
+			
+			<!-- Main charts -->
+            <div class="row">
+                
+                <!-- col Renzi -->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <!-- User card with thumb and social icons at the bottom -->
+                    <div class="panel">
+                        <div class="panel-body text-center">
+                            <span class="display-inline-block">
+                                <img src="{{ url_for('static', filename='assets/images/Renzi.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
+                                    </span>
+                            
+                            <h6 class="text-semibold no-margin-bottom">
+                                <span class="text-default">Matteo Renzi</span>
+                                <small class="display-block">Partito Democratico</small>
+                            </h6>
+                        </div>
+                    </div>
+                    <!-- /user card with thumb and social icons at the bottom -->
+                </div>
+                <!-- \col Renzi-->
+                
+                <!-- col Di Maio -->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    
+                    <!-- User card with thumb and social icons at the bottom -->
+                    <div class="panel">
+                        <div class="panel-body text-center">
+                            <span class="display-inline-block">
+                                <img src="{{ url_for('static', filename='assets/images/DiMaio.png') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
+                                    </span>
+                            
+                            <h6 class="text-semibold no-margin-bottom">
+                                <span class="text-default" target='_blank'>Luigi Di Maio</span>
+                                <small class="display-block">Movimento 5 Stelle</small>
+                            </h6>
+                        </div>
+                    </div>
+                    <!-- /user card with thumb and social icons at the bottom -->
+                    
+                </div>
+                <!-- \col Di Maio-->
+                
+                <!-- col Berlusconi -->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    
+                    <!-- User card with thumb and social icons at the bottom -->
+                    <div class="panel">
+                        <div class="panel-body text-center">
+                            <span class="display-inline-block">
+                                <img src="{{ url_for('static', filename='assets/images/Silvio.jpg') }}" class="img-circle img-responsive" alt="" style="width: 120px; height: 120px;">
+                                    </span>
+                            
+                            <h6 class="text-semibold no-margin-bottom">
+                                <span class="text-default" target='_blank'>Silvio Berlusconi</span>
+                                <small class="display-block">Forza Italia</small>
+                            </h6>
+                        </div>
+                    </div>
+                    <!-- /user card with thumb and social icons at the bottom -->
+                    
+                </div>
+                <!-- \col Berlusconi-->
+            
+            </div>
+            <!-- /main charts -->
+		
+			</div>
+			<!-- /main content -->
+			
+		</div>
+		<!-- /Page content -->
+
+    <script>
+    document.getElementById("link5").setAttribute('class', "active");
+    document.getElementById("link_home").innerHTML = "Osservatorio";
+    </script>
+
+{% endblock %}
