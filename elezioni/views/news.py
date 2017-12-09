@@ -19,7 +19,7 @@ def news():
                 ,to_char(to_date(substring("pubAt" from 0 for 11),'YYYY-MM-DD'), 'DD Month YYYY') as dt_post
             from ''' + app.config['SCHEMA_ELE'] + '''."news"
             order by dt_rif desc,"pubAt" desc
-            limit 10;
+            limit 18;
     ''')
     
     news = cur.fetchall()

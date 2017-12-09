@@ -32,18 +32,25 @@ $(function() {
       "name" : data[i].provincia
       };
       markers.push(centroid);
-      markersValues.push('flag');
+      markersValues.push(data[i].menzioni);
       };
       };
   
       };
   
       map.addMarkers(markers, []);
-      //map.series.markers[0].setValues(markersValues);
+      map.series.markers[0].setValues(markersValues);
+      //console.log(map.labels);
   };
   
   $.getJSON('/mappa_pd', function(data){
     // World map PD
+    menzioni = [];
+    for (var i = 0; i < data.length; i++){
+            menzioni.push(data[i].menzioni);
+    };
+    var min = Math.min.apply(null, menzioni);
+    var max = Math.max.apply(null, menzioni);
     $('.map-world-1').vectorMap({
         map: 'it_mill',
         backgroundColor: 'transparent',
@@ -52,22 +59,38 @@ $(function() {
                 fill: '#93D389'
             }
         },
-                                markerStyle: {
-                                initial: {
-                                fill: 'red',
-                                stroke: '#383f47'
-                                }
-                                },
-        markers: []
+        markerStyle: {
+            initial: {
+                fill: 'red',
+                stroke: '#383f47'
+            }
+        },
+        markers: [],
+        series: {
+            markers: [{
+                attribute: 'r',
+                scale: [5, 20],
+                values: [],
+                min: min,
+                max: max
+            }]
+        }
     });
             
-            // Aggiungo i Markers Dinamicamente
-            var map=$('.map-world-1').vectorMap('get','mapObject');
-            addMarkers(data,map);
+            
+    // Aggiungo i Markers Dinamicamente
+    var map=$('.map-world-1').vectorMap('get','mapObject');
+    addMarkers(data,map);
   });
   
   $.getJSON('/mappa_m5s', function(data){
           // World map M5S
+            menzioni = [];
+            for (var i = 0; i < data.length; i++){
+            menzioni.push(data[i].menzioni);
+            };
+            var min = Math.min.apply(null, menzioni);
+            var max = Math.max.apply(null, menzioni);
           $('.map-world-2').vectorMap({
                 map: 'it_mill',
                 backgroundColor: 'transparent',
@@ -82,7 +105,16 @@ $(function() {
                             stroke: '#383f47'
                             }
                     },
-                markers: []
+                markers: [],
+                series: {
+                    markers: [{
+                        attribute: 'r',
+                        scale: [5, 20],
+                        values: [],
+                        min: min,
+                        max: max
+                    }]
+                }
            });
             
           // Aggiungo i Markers Dinamicamente
@@ -91,6 +123,12 @@ $(function() {
         });
   
   $.getJSON('/mappa_silvio', function(data){
+            menzioni = [];
+            for (var i = 0; i < data.length; i++){
+            menzioni.push(data[i].menzioni);
+            };
+            var min = Math.min.apply(null, menzioni);
+            var max = Math.max.apply(null, menzioni);
   // World map silvio
   $('.map-world-3').vectorMap({
         map: 'it_mill',
@@ -100,13 +138,22 @@ $(function() {
             fill: '#93D389'
         }
         },
-                              markerStyle: {
-                              initial: {
-                              fill: 'black',
-                              stroke: '#383f47'
-                              }
-                              },
-                              markers: []
+        markerStyle: {
+            initial: {
+                fill: 'black',
+                stroke: '#383f47'
+            }
+        },
+        markers: [],
+        series: {
+                markers: [{
+                    attribute: 'r',
+                    scale: [5, 20],
+                    values: [],
+                    min: min,
+                    max: max
+                }]
+        }
     });
             // Aggiungo i Markers Dinamicamente
             var map=$('.map-world-3').vectorMap('get','mapObject');
