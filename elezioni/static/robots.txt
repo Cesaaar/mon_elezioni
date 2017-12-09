@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://www.monitoraggioelezioni.it/sitemap.xml

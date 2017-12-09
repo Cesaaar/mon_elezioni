@@ -1,6 +1,6 @@
 # import
 from elezioni import app, get_db, render_template, url_for
-from flask import jsonify
+from flask import jsonify, send_from_directory, request
 import json
 
 # first page
@@ -45,3 +45,8 @@ def contatti():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
