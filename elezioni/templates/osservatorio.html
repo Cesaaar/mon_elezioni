@@ -153,7 +153,7 @@
                         {% endif %}
                         <!-- /basic area chart -->
                         
-                        <!-- Facebook Statistics -->
+                        <!-- Twitter Statistics -->
                         <div class="text-size-small text-muted">
                             {% if u=='Renzi' %}
                             <i class="icon-bubbles2 text-size-base text-pink position-left"> {{tw_post1[0].post_day | round(1)}}</i>- Media tweet giornalieri
@@ -172,10 +172,27 @@
                             <i class="icon-heart6 text-size-base text-pink position-left"> {{tw_post3[0].likes_day | round}}</i>- Media likes giornalieri
                             {% endif %}
                         </div>
-                        <!-- /Facebook Statistics -->
+                        <!-- /Twitter Statistics -->
                         
                     </div>
                     <!-- /Simple statistics Twitter-->
+                    
+                    <!-- Word Cloud-->
+                    <div class="thumbnail">
+                        <div class="thumb">
+                            {% if u=='Renzi' %}
+                            <img src="{{ url_for('static', filename='assets/images/wordcloud_renzi.png') }}" alt="Word Cloud">
+                            {% elif u=='Di Maio' %}
+                            <img src="{{ url_for('static', filename='assets/images/wordcloud_dimaio.png') }}" alt="Word Cloud">
+                            {% elif u=='Berlusconi' %}
+                            <img src="{{ url_for('static', filename='assets/images/wordcloud_berlusconi.png') }}" alt="Word Cloud">
+                            {% endif %}
+                        </div>
+                        <div class="caption">
+                            <h6 class="no-margin"><span class="text-default">Web Word Cloud</span>
+                        </div>
+                    </div>
+                    <!-- /Word Cloud-->
                     
                 </div>
                 {% endfor %}
