@@ -51,6 +51,96 @@ def osservatorio():
             limit 1;
     ''')
     
+    cur4 = engine.execute(
+    '''     select
+                count(id_post)::float/count(distinct dt_post2)::float as post_day
+                ,round(sum(likes)/count(distinct dt_post2)) as likes_day
+            from(
+                select
+                    id_post
+                    ,max(likes) as likes
+                    ,to_date(substring(dt_post from 0 for 11),'YYYY-MM-DD')  as dt_post2
+                from ''' + app.config['SCHEMA_ELE'] + '''."fb_posts"
+                where "user"=''' "'" + app.config['USER1'] + "'" '''
+                group by id_post,to_date(substring(dt_post from 0 for 11),'YYYY-MM-DD')
+                ) a;
+    ''')
+    
+    cur5 = engine.execute(
+    '''     select
+                count(id_post)::float/count(distinct dt_post2)::float as post_day
+                ,round(sum(likes)/count(distinct dt_post2)) as likes_day
+            from(
+                select
+                    id_post
+                    ,max(likes) as likes
+                    ,to_date(substring(dt_post from 0 for 11),'YYYY-MM-DD')  as dt_post2
+                from ''' + app.config['SCHEMA_ELE'] + '''."fb_posts"
+                where "user"=''' "'" + app.config['USER2'] + "'" '''
+                group by id_post,to_date(substring(dt_post from 0 for 11),'YYYY-MM-DD')
+                ) a;
+    ''')
+    
+    cur6 = engine.execute(
+    '''     select
+                count(id_post)::float/count(distinct dt_post2)::float as post_day
+                ,round(sum(likes)/count(distinct dt_post2)) as likes_day
+                from(
+                select
+                    id_post
+                    ,max(likes) as likes
+                    ,to_date(substring(dt_post from 0 for 11),'YYYY-MM-DD')  as dt_post2
+                from ''' + app.config['SCHEMA_ELE'] + '''."fb_posts"
+                where "user"=''' "'" + app.config['USER3'] + "'" '''
+                group by id_post,to_date(substring(dt_post from 0 for 11),'YYYY-MM-DD')
+                ) a;
+    ''')
+    
+    cur41 = engine.execute(
+    '''     select
+                count(id_post)::float/count(distinct dt_post2)::float as post_day
+                ,round(sum(likes)/count(distinct dt_post2)) as likes_day
+                from(
+                    select
+                    id_post
+                    ,max(likes) as likes
+                    ,to_char(dt_post,'YYYY-MM-DD')  as dt_post2
+                    from ''' + app.config['SCHEMA_ELE'] + '''."tw_posts"
+                    where "user"=''' "'" + app.config['USER1'] + "'" '''
+                    group by id_post,to_char(dt_post,'YYYY-MM-DD')
+                ) a;
+    ''')
+    
+    cur51 = engine.execute(
+    '''     select
+                count(id_post)::float/count(distinct dt_post2)::float as post_day
+                ,round(sum(likes)/count(distinct dt_post2)) as likes_day
+                from(
+                    select
+                    id_post
+                    ,max(likes) as likes
+                    ,to_char(dt_post,'YYYY-MM-DD')  as dt_post2
+                    from ''' + app.config['SCHEMA_ELE'] + '''."tw_posts"
+                    where "user"=''' "'" + app.config['USER2'] + "'" '''
+                    group by id_post,to_char(dt_post,'YYYY-MM-DD')
+                ) a;
+    ''')
+    
+    cur61 = engine.execute(
+    '''     select
+                count(id_post)::float/count(distinct dt_post2)::float as post_day
+                ,round(sum(likes)/count(distinct dt_post2)) as likes_day
+                from(
+                    select
+                        id_post
+                        ,max(likes) as likes
+                        ,to_char(dt_post,'YYYY-MM-DD')  as dt_post2
+                    from ''' + app.config['SCHEMA_ELE'] + '''."tw_posts"
+                    where "user"=''' "'" + app.config['USER3'] + "'" '''
+                    group by id_post,to_char(dt_post,'YYYY-MM-DD')
+                ) a;
+    ''')
+    
     id_user1_fb = app.config['USER1_ID_FB']
     id_user2_fb = app.config['USER2_ID_FB']
     id_user3_fb = app.config['USER3_ID_FB']
@@ -72,7 +162,17 @@ def osservatorio():
     tw_fans2 = cur21.fetchall()
     tw_fans3 = cur31.fetchall()
     
+    fb_post1 = cur4.fetchall()
+    fb_post2 = cur5.fetchall()
+    fb_post3 = cur6.fetchall()
+    
+    tw_post1 = cur41.fetchall()
+    tw_post2 = cur51.fetchall()
+    tw_post3 = cur61.fetchall()
+    
     return render_template('osservatorio.html', fb_fans=fb_fans,fb_fans2=fb_fans2,fb_fans3=fb_fans3,
                            tw_fans=tw_fans,tw_fans2=tw_fans2,tw_fans3=tw_fans3, user=user,
                            id_user1_fb=id_user1_fb, id_user2_fb=id_user2_fb, id_user3_fb=id_user3_fb,
-                           id_user1_tw=id_user1_tw,id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw)
+                           id_user1_tw=id_user1_tw,id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw,
+                           fb_post1=fb_post1,fb_post2=fb_post2,fb_post3=fb_post3,
+                           tw_post1=tw_post1,tw_post2=tw_post2,tw_post3=tw_post3)
