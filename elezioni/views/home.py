@@ -46,6 +46,11 @@ def contatti():
 def about():
     return render_template('about.html')
 
+# cookie policy
+@app.route('/policy')
+def policy():
+    return render_template('policy.html')
+
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')
 def static_from_root():
