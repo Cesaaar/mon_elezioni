@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block body %}
+
+		<!-- Page content -->
+		<div class="page-content">
+		
+			<!-- Main content -->
+			<div class="content-wrapper">
+                
+                <div class="panel">
+                    <div class="panel-body">
+                        <h2 class="text-center content-group-lg">
+                            News Singola
+                            <small class="display-block">Singola news associata ai candidati alle <strong>elezioni politiche</strong> oggetto di monitoraggio</small>
+                        </h2>
+                        <div style="float:right">
+                            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+                        </div>
+                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.monitoraggioelezioni.it%2Fnews&layout=button&size=small&mobile_iframe=true&appId=165415010725423&width=79&height=20" width="79" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" align="right"></iframe>
+                    </div>
+                </div>
+			
+			<!-- Main charts  row 1-->
+				<div class="row">
+                        <!-- Blog layout #7 with image -->
+                        <div class="panel panel-flat blog-horizontal blog-horizontal-1">
+                            <div class="panel-heading">
+                                <h5 class="panel-title text-semibold">
+                                    {{news_s[0].titolo}}
+                                </h5>
+                            </div>
+                            
+                            <div class="panel-body">
+                                <div class="thumb">
+                                    <img src="{{news_s[0].img}}" alt="" class="img-responsive">
+                                        <div class="caption-overflow">
+                                            <span>
+                                                <a href="{{news_s[0].url}}" target='_blank' class="btn btn-flat border-white text-white btn-rounded btn-icon"><i class="icon-arrow-right8"></i></a>
+                                            </span>
+                                        </div>
+                                        </div>
+                                
+                                <div class="blog-preview">
+                                    <p>{{news_s[0].descrizione}}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="panel-footer panel-footer-transparent">
+                                <div class="heading-elements">
+                                    <ul class="list-inline list-inline-separate heading-text text-muted">
+                                        <li>By <p class="text-muted">{{news_s[0].fonte}}</p></li>
+                                        <li>{{news_s[0].dt_post}} - {{news_s[0].hour_post}}</li>
+                                    </ul>
+                                    
+                                    <a href="{{news_s[0].url}}" class="heading-text pull-right" target='_blank'>Read more <i class="icon-arrow-right14 position-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /blog layout #7 with image -->
+                    
+                </div>
+                <!-- /main charts - row 3 -->
+		
+			</div>
+			<!-- /main content -->
+			
+		</div>
+		<!-- /Page content -->
+
+    <script>
+    document.getElementById("link_home").innerHTML = "News Singola";
+    </script>
+
+{% endblock %}

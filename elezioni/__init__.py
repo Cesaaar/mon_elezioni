@@ -46,5 +46,3 @@ def _jinja2_filter_datetime(date, fmt=None):
     native = date.replace(tzinfo=None)
     format='%d %b %Y, %-H:%-M'
     return native.strftime(format)
-
-
