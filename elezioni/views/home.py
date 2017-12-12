@@ -5,8 +5,6 @@ import json
 import os
 from datetime import datetime, date, time, timedelta
 from jinja2 import Environment, FileSystemLoader
-from urllib.parse import urlparse
-from posixpath import basename, dirname
 
 # first page
 @app.route('/')
