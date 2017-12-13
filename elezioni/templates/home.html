@@ -33,6 +33,30 @@
                         {% else %}
                         <div class="timeline-row post-even">
                         {% endif %}
+                        {% if loop.index in (3,6,9,12) %}
+                        <div class="timeline-icon">
+                            <div class="bg-info-400">
+                                <i class="icon-feed2"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-time">
+                            <span class="text-muted"></span>
+                        </div>
+                        <div class="panel panel-flat timeline-content">
+                            </br>
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-fe+6a+31-k2+pr"
+                                data-ad-client="ca-pub-6362347303628164"
+                                data-ad-slot="3048645493"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </br>
+                        </div>
+                        {% else %}
                         <div class="timeline-icon">
                             {% if t.utente=='Berlusconi' %}
                             <img src="{{ url_for('static', filename='assets/images/Silvio.jpg') }}" alt="Silvio Berlusconi">
@@ -104,8 +128,10 @@
                                 </div>
                             </div>
                         </div>
+                         {% endif %}
                     </div>
                     <!-- /blog post -->
+                   
                     {% endfor %}
                     
                 </div>
