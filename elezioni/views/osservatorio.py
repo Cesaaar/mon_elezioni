@@ -1,4 +1,5 @@
 # import
+from __future__ import division
 from elezioni import app, get_db, render_template, url_for
 import json
 
