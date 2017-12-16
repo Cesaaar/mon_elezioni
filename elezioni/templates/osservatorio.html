@@ -11,7 +11,12 @@
                     <div class="panel-body">
                         <h2 class="text-center content-group-lg">
                             Osservatorio
-                            <small class="display-block">L'osservatorio raccoglie le principali informazioni provenienti dal web e dal mondo social relative alle <strong>elezioni politiche</strong> e le espone attraverso degli indicatori sintetici</small>
+                            <small class="display-block">
+                                <h6>
+                                    <p style="text-align: left;">L'osservatorio intende monitorare la <strong>visibilit&agrave; social</strong> e <strong>web&nbsp;</strong>dei principali <strong>candidati politici</strong> alle elezioni italiane del 2018. L'attuale legge sulla <a href="https://it.wikipedia.org/wiki/Par_condicio" target="_blank">par condicio</a>&nbsp;pone specifici limiti agli interventi politici in televisione, ma non presta troppa attenzione all'evoluzione delle campagne politiche sui social e, in generale, sul mondo del web.&nbsp;</p>
+                                    <p style="text-align: left;">Il monitoraggio &egrave; <strong>apartitico</strong> ed &egrave; realizzato secondo <strong>criteri di trasparenza</strong> sia nella lettura delle fonti che nella sintesi degli indicatori. Il <strong>codice</strong> e gli <strong>algoritmi</strong> per il trattamento dei dati sono pubblicati in maniera open source su github. Per saperne di pi&ugrave; visita la pagina <a href="http://www.monitoraggioelezioni.it/about" target="_blank" rel="noopener">about</a>, buona navigazione.</p>
+                                </h6>
+                            </small>
                         </h2>
                         <div style="float:right">
                             <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
@@ -73,11 +78,11 @@
                             </div>
                             <div class="media-body text-right">
                                 {% if u=='Renzi' %}
-                                <h3 class="no-margin text-semibold">{{fb_fans[0].fb_fans}}</h3>
+                                <h3 class="no-margin text-semibold">{{"{:,}".format(fb_fans[0].fb_fans)}}</h3>
                                 {% elif u=='Di Maio' %}
-                                <h3 class="no-margin text-semibold">{{fb_fans2[0].fb_fans}}</h3>
+                                <h3 class="no-margin text-semibold">{{"{:,}".format(fb_fans2[0].fb_fans)}}</h3>
                                 {% elif u=='Berlusconi' %}
-                                <h3 class="no-margin text-semibold">{{fb_fans3[0].fb_fans}}</h3>
+                                <h3 class="no-margin text-semibold">{{"{:,}".format(fb_fans3[0].fb_fans)}}</h3>
                                 {% endif %}
                                 <span class="text-uppercase text-size-mini text-muted">Facebook Fans</span>
                             </div>
@@ -132,11 +137,11 @@
                             </div>
                             <div class="media-body text-right">
                                 {% if u=='Renzi' %}
-                                <h3 class="no-margin text-semibold">{{tw_fans[0].tw_fans}}</h3>
+                                <h3 class="no-margin text-semibold">{{"{:,}".format(tw_fans[0].tw_fans)}}</h3>
                                 {% elif u=='Di Maio' %}
-                                <h3 class="no-margin text-semibold">{{tw_fans2[0].tw_fans}}</h3>
+                                <h3 class="no-margin text-semibold">{{"{:,}".format(tw_fans2[0].tw_fans)}}</h3>
                                 {% elif u=='Berlusconi' %}
-                                <h3 class="no-margin text-semibold">{{tw_fans3[0].tw_fans}}</h3>
+                                <h3 class="no-margin text-semibold">{{"{:,}".format(tw_fans3[0].tw_fans)}}</h3>
                                 {% endif %}
                                 <span class="text-uppercase text-size-mini text-muted">Twitter Fans</span>
                             </div>
@@ -178,7 +183,9 @@
                     <!-- /Simple statistics Twitter-->
                     
                     <!-- Word Cloud-->
-                    <div class="thumbnail">
+                    <div class="panel panel-body text-center">
+                        <h6 class="text-semibold no-margin-bottom mt-5">Word Cloud</h6>
+                        </br>
                         <div class="thumb">
                             {% if u=='Renzi' %}
                             <img src="{{ url_for('static', filename='assets/images/wordcloud_renzi.png') }}" alt="Word Cloud">
@@ -188,9 +195,10 @@
                             <img src="{{ url_for('static', filename='assets/images/wordcloud_berlusconi.png') }}" alt="Word Cloud">
                             {% endif %}
                         </div>
-                        <div class="caption">
-                            <h6 class="no-margin"><span class="text-default">Web Word Cloud</span>
-                        </div>
+                        <ul class="list-inline list-inline-separate heading-text text-muted">
+                            <li><a href="{{ url_for('timeline')}}" target='_blank' class="heading-text pull-left">Social</a></li>
+                            <li><a href="{{ url_for('news')}}" target='_blank' class="heading-text pull-right">Web</a></li>
+                        </ul>
                     </div>
                     <!-- /Word Cloud-->
                     
@@ -198,11 +206,11 @@
                     <div class="panel panel-body text-center">
                         <h6 class="text-semibold no-margin-bottom mt-5">Copertura % del Territorio Italiano</h6>
                         {% if u=='Renzi' %}
-                        <div class="text-size-small text-muted content-group-sm" id="luoghi1" data-luoghi1="{{luoghi1}}">Renzi</div>
+                        <div class="text-size-small text-muted content-group-sm" id="luoghi1" data-luoghi1="{{luoghi1}}"></div>
                         {% elif u=='Di Maio' %}
-                        <div class="text-size-small text-muted content-group-sm" id="luoghi2" data-luoghi2="{{luoghi2}}">Di Maio</div>
+                        <div class="text-size-small text-muted content-group-sm" id="luoghi2" data-luoghi2="{{luoghi2}}"></div>
                         {% elif u=='Berlusconi' %}
-                        <div class="text-size-small text-muted content-group-sm" id="luoghi3" data-luoghi3="{{luoghi3}}">Berlusconi</div>
+                        <div class="text-size-small text-muted content-group-sm" id="luoghi3" data-luoghi3="{{luoghi3}}"></div>
                         {% endif %}
                         
                         {% if u=='Renzi' %}
