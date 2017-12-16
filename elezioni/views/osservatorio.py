@@ -1,8 +1,9 @@
 # import
 from elezioni import app, get_db, render_template, url_for
+import json
 
 # youtube page
-@app.route('/osservatorio')
+@app.route('/')
 def osservatorio():
     engine = get_db()
     cur = engine.execute(
@@ -140,6 +141,38 @@ def osservatorio():
                     group by id_post,to_char(dt_post,'YYYY-MM-DD')
                 ) a;
     ''')
+
+    cur_l = engine.execute(
+    '''
+        SELECT count(*) as tot_province
+        FROM ''' + app.config['SCHEMA_ELE'] + '''."mappe_province";
+    '''
+    )
+    
+    cur_l_n = engine.execute(
+    '''
+        SELECT
+            "user" as user
+            ,count(distinct provincia) as provincia
+        FROM ''' + app.config['SCHEMA_ELE'] + '''."mappe"
+            group by "user";
+    '''
+    )
+    
+    
+    den = cur_l.fetchall()
+    num_n = cur_l_n.fetchall()
+    for n in num_n:
+        if(n.user==app.config['USER1']):
+            num1 = n.provincia
+        elif(n.user==app.config['USER2']):
+            num2 = n.provincia
+        elif(n.user==app.config['USER3']):
+            num3 = n.provincia
+    result_1 = round(num1/den[0].tot_province,2)
+    result_2 = round(num2/den[0].tot_province,2)
+    result_3 = round(num3/den[0].tot_province,2)
+    
     
     id_user1_fb = app.config['USER1_ID_FB']
     id_user2_fb = app.config['USER2_ID_FB']
@@ -175,4 +208,5 @@ def osservatorio():
                            id_user1_fb=id_user1_fb, id_user2_fb=id_user2_fb, id_user3_fb=id_user3_fb,
                            id_user1_tw=id_user1_tw,id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw,
                            fb_post1=fb_post1,fb_post2=fb_post2,fb_post3=fb_post3,
-                           tw_post1=tw_post1,tw_post2=tw_post2,tw_post3=tw_post3)
+                           tw_post1=tw_post1,tw_post2=tw_post2,tw_post3=tw_post3,
+                           luoghi1=result_1, luoghi2=result_2, luoghi3=result_3)

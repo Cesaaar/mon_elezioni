@@ -7,8 +7,8 @@ from datetime import datetime, date, time, timedelta
 from jinja2 import Environment, FileSystemLoader
 
 # first page
-@app.route('/')
-def home():
+@app.route('/timeline')
+def timeline():
     engine = get_db()
     
     cur = engine.execute(
@@ -35,7 +35,7 @@ def home():
     id_user2_tw = app.config['USER2_ID_TW']
     id_user3_tw = app.config['USER3_ID_TW']
     
-    return render_template('home.html',timeline=timeline,id_user1_fb=id_user1_fb,
+    return render_template('timeline.html',timeline=timeline,id_user1_fb=id_user1_fb,
                            id_user2_fb=id_user2_fb, id_user3_fb=id_user3_fb, id_user1_tw=id_user1_tw,
                            id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw)
 
@@ -65,8 +65,12 @@ def sitemap():
     engine = get_db()
     
     cur = engine.execute(
-        '''     select distinct url as url
-                from ''' + app.config['SCHEMA_ELE'] + '''."news";
+        '''     select distinct
+                    url as url
+                    ,"pubAt" as dt_post
+                from ''' + app.config['SCHEMA_ELE'] + '''."news"
+                order by "pubAt" desc
+                limit 1000;
         ''')
     
     news = cur.fetchall()
@@ -97,7 +101,7 @@ def sitemap():
             pages.append(
                         [pag,ten_days_ago,pri]
             )
-    print(pages)
+    # print(pages)
     sitemap_xml = render_template('sitemap_template.xml', pages=pages)
     response= make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"

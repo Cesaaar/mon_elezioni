@@ -6,7 +6,48 @@ import json
 @app.route('/mappe')
 def mappe():
     engine = get_db()
-    return render_template('mappe.html')
+    
+    cur = engine.execute(
+    '''
+        SELECT
+            provincia
+            ,count(*) as menzioni
+        FROM ''' + app.config['SCHEMA_ELE'] + '''."mappe"
+        WHERE "user"=''' "'" + app.config['USER1'] + "'" '''
+        GROUP BY provincia
+        ORDER BY count(*) desc
+        LIMIT 5;
+    ''')
+    
+    cur2 = engine.execute(
+    '''
+        SELECT
+            provincia
+            ,count(*) as menzioni
+        FROM ''' + app.config['SCHEMA_ELE'] + '''."mappe"
+        WHERE "user"=''' "'" + app.config['USER2'] + "'" '''
+        GROUP BY provincia
+        ORDER BY count(*) desc
+        LIMIT 5;
+    ''')
+    
+    cur3 = engine.execute(
+    '''
+        SELECT
+            provincia
+            ,count(*) as menzioni
+        FROM ''' + app.config['SCHEMA_ELE'] + '''."mappe"
+        WHERE "user"=''' "'" + app.config['USER3'] + "'" '''
+        GROUP BY provincia
+        ORDER BY count(*) desc
+        LIMIT 5;
+    ''')
+    
+    map1 = cur.fetchall()
+    map2 = cur2.fetchall()
+    map3 = cur3.fetchall()
+    
+    return render_template('mappe.html',map1=map1, map2=map2, map3=map3)
 
 # json json mappa renzi
 @app.route('/mappa_pd')

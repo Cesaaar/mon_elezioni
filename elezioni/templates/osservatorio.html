@@ -194,6 +194,29 @@
                     </div>
                     <!-- /Word Cloud-->
                     
+                    <!-- Copertura Luoghi -->
+                    <div class="panel panel-body text-center">
+                        <h6 class="text-semibold no-margin-bottom mt-5">Copertura % del Territorio Italiano</h6>
+                        {% if u=='Renzi' %}
+                        <div class="text-size-small text-muted content-group-sm" id="luoghi1" data-luoghi1="{{luoghi1}}">Renzi</div>
+                        {% elif u=='Di Maio' %}
+                        <div class="text-size-small text-muted content-group-sm" id="luoghi2" data-luoghi2="{{luoghi2}}">Di Maio</div>
+                        {% elif u=='Berlusconi' %}
+                        <div class="text-size-small text-muted content-group-sm" id="luoghi3" data-luoghi3="{{luoghi3}}">Berlusconi</div>
+                        {% endif %}
+                        
+                        {% if u=='Renzi' %}
+                        <div class="svg-center" id="segmented_gauge"></div>
+                        {% elif u=='Di Maio' %}
+                        <div class="svg-center" id="segmented_gauge_2"></div>
+                        {% elif u=='Berlusconi' %}
+                        <div class="svg-center" id="segmented_gauge_3"></div>
+                        {% endif %}
+                        
+                        <a href="{{ url_for('mappe')}}" target='_blank'>Dettaglio Luoghi</a>
+                    </div>
+                    <!-- /Copertura Luoghi-->
+                    
                     <!-- Pubblicità -->
                     <div class="thumbnail">
                         <div class="thumb">
@@ -229,5 +252,6 @@
     </script>
 
     <script  type="text/javascript" src="{{ url_for('static', filename='assets/js/elezioni_chart.js') }}"></script>
+   <script  type="text/javascript" src="{{ url_for('static', filename='assets/js/copertura_luoghi.js') }}"></script>
 
 {% endblock %}

@@ -30,11 +30,10 @@ def close_db(error):
 		g.postgres.dispose()
 
 ''' VISTE '''
-from elezioni.views import home
+from elezioni.views import timeline
 from elezioni.views import facebook
 from elezioni.views import twitter
 from elezioni.views import news
-from elezioni.views import youtube
 from elezioni.views import mappe
 from elezioni.views import osservatorio
 

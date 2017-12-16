@@ -1,6 +1,14 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<!-- Theme JS files -->
+<script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+
+<script type="text/javascript" src="assets/js/core/app.js"></script>
+<script type="text/javascript" src="assets/js/pages/datatables_basic.js"></script>
+<!-- /theme JS files -->
+
 		<!-- Page content -->
 		<div class="page-content">
 		
@@ -21,7 +29,7 @@
                 </div>
                 
             <div class="row">
-                <!-- World map -->
+                    <!-- World map -->
                     <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="panel panel-flat">
                         <div class="panel-heading">
@@ -31,6 +39,30 @@
                             <div class="map-container map-world-1"></div>
                         </div>
                     </div>
+                    
+                    <!-- Basic datatable -->
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Top 5 Menzioni - Renzi</h5>
+                        </div>
+                        <table class="table datatable-basic">
+                            <thead>
+                                <tr>
+                                    <th>Luogo</th>
+                                    <th>Menzioni</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for m in map1 %}
+                            <tr>
+                                <td>{{m.provincia}}</td>
+                                <td>{{m.menzioni}}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                     <!-- /Basic datatable -->
                     
                     <div class="panel panel-flat">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -57,6 +89,31 @@
                                 <div class="map-container map-world-2"></div>
                             </div>
                         </div>
+                        
+                        <!-- Basic datatable -->
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">Top 5 Menzioni - Di Maio</h5>
+                            </div>
+                            <table class="table datatable-basic">
+                                <thead>
+                                    <tr>
+                                        <th>Luogo</th>
+                                        <th>Menzioni</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for m in map2 %}
+                                    <tr>
+                                        <td>{{m.provincia}}</td>
+                                        <td>{{m.menzioni}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /Basic datatable -->
+                        
                         <div class="panel panel-flat">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <ins class="adsbygoogle"
@@ -82,6 +139,31 @@
                                 <div class="map-container map-world-3"></div>
                             </div>
                         </div>
+                        
+                        <!-- Basic datatable -->
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">Top 5 Menzioni - Berlusconi</h5>
+                            </div>
+                            <table class="table datatable-basic">
+                                <thead>
+                                    <tr>
+                                        <th>Luogo</th>
+                                        <th>Menzioni</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for m in map3 %}
+                                    <tr>
+                                        <td>{{m.provincia}}</td>
+                                        <td>{{m.menzioni}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /Basic datatable -->
+                        
                         <div class="panel panel-flat">
                             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <ins class="adsbygoogle"

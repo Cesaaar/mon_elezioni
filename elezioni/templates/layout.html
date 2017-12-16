@@ -16,8 +16,8 @@
     <meta property="og:image" content="{{ url_for('static', filename='assets/images/Social.jpg') }}">
     <meta property="og:description" content="Monitoraggio del web e dei social dei principali candidati politici italiani, in occasione delle elezioni politiche 2018">
     <meta property="og:locale" content="it_IT">
-    <meta name=”description” content=”Monitoraggio del web e dei social dei principali candidati politici italiani, in occasione delle elezioni politiche 2018”>
-    <meta name=”keywords” content=”elezioni politiche 2018 italia renzi dimaio berlusconi m5s pd forzaitalia partitodemocratico mappe python dati social digital facebook twitter monitoraggio osservatorio andrea cesarini web”>
+    <meta name="description" content="Monitoraggio del web e dei social dei principali candidati politici italiani, in occasione delle elezioni politiche 2018">
+    <meta name="keywords" content="elezioni politiche 2018 italia renzi dimaio berlusconi m5s pd forzaitalia partitodemocratico mappe python dati social digital facebook twitter monitoraggio osservatorio andrea cesarini web">
 	<title>Monitoraggio delle Elezioni Politiche Italiane 2018</title>
 
 	<!-- Global stylesheets -->
@@ -132,7 +132,7 @@
 
 			<div class="heading-elements">
 				<ul class="breadcrumb heading-text">
-					<li><a href="{{ url_for('home') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+					<li><a href="{{ url_for('osservatorio') }}"><i class="icon-home2 position-left"></i> Home</a></li>
 					<li class="active" id="link_home"></li>
 				</ul>
 			</div>
@@ -148,10 +148,10 @@
 
 			<div class="navbar-collapse collapse" id="navbar-second-toggle">
 				<ul class="nav navbar-nav navbar-nav-material">
-                    <li id="link0"><a href="{{ url_for('home')}}">Timeline Social</a></li>
-                    <li id="link4"><a href="{{ url_for('mappe')}}">Luoghi</a></li>
-                    <li id="link3"><a href="{{ url_for('news')}}">News</a></li>
                     <li id="link5"><a href="{{ url_for('osservatorio')}}">Osservatorio</a></li>
+                    <li id="link4"><a href="{{ url_for('mappe')}}">Luoghi</a></li>
+                    <li id="link0"><a href="{{ url_for('timeline')}}">Timeline Social</a></li>
+                    <li id="link3"><a href="{{ url_for('news')}}">News Web</a></li>
 				</ul>
 			</div>
 		</div>

@@ -27,7 +27,19 @@ def news():
     
     news = cur.fetchall()
     
-    return render_template('news.html', news=news)
+    internal_link = []
+    for n in news:
+        url = n.url
+        slashparts = url.split('/')
+        final_seg = max(slashparts, key=len)
+        end = final_seg.find('.')-1
+        final_seg =final_seg[0:end]
+        if(len(final_seg)>15):
+            base_d = 'http://www.monitoraggioelezioni.it/news/'
+            pag_d = base_d+final_seg.replace("&", "-")
+            internal_link.append(pag_d)
+    
+    return render_template('news.html', news=news, internal_link=internal_link)
 
 @app.route('/news/<titolo>', methods=['GET'])
 def daily_post(titolo):
