@@ -172,7 +172,7 @@ def osservatorio():
     result_1 = round(num1/den[0].tot_province,2)
     result_2 = round(num2/den[0].tot_province,2)
     result_3 = round(num3/den[0].tot_province,2)
-    
+    print(result_1)
     
     id_user1_fb = app.config['USER1_ID_FB']
     id_user2_fb = app.config['USER2_ID_FB']
