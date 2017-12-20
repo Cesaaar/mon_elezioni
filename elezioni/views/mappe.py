@@ -47,7 +47,9 @@ def mappe():
     map2 = cur2.fetchall()
     map3 = cur3.fetchall()
     
-    return render_template('mappe.html',map1=map1, map2=map2, map3=map3)
+    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    
+    return render_template('mappe.html',map1=map1, map2=map2, map3=map3, title=title)
 
 # json json mappa renzi
 @app.route('/mappa_pd')

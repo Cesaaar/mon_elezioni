@@ -35,24 +35,29 @@ def timeline():
     id_user2_tw = app.config['USER2_ID_TW']
     id_user3_tw = app.config['USER3_ID_TW']
     
+    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    
     return render_template('timeline.html',timeline=timeline,id_user1_fb=id_user1_fb,
                            id_user2_fb=id_user2_fb, id_user3_fb=id_user3_fb, id_user1_tw=id_user1_tw,
-                           id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw)
+                           id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw, title=title)
 
 # contatti
 @app.route('/contatti', methods=["GET"])
 def contatti():
-    return render_template('contatti.html')
+    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    return render_template('contatti.html', title=title)
 
 # about
 @app.route('/about', methods=["GET"])
 def about():
-    return render_template('about.html')
+    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    return render_template('about.html',title=title)
 
 # cookie policy
 @app.route('/policy', methods=["GET"])
 def policy():
-    return render_template('policy.html')
+    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    return render_template('policy.html',title=title)
 
 # Generate Sitemap.xml
 @app.route('/sitemap.xml', methods=["GET"])
@@ -101,7 +106,6 @@ def sitemap():
             pages.append(
                         [pag,ten_days_ago,pri]
             )
-    # print(pages)
     sitemap_xml = render_template('sitemap_template.xml', pages=pages)
     response= make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"

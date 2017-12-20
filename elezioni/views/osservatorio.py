@@ -173,7 +173,6 @@ def osservatorio():
     result_1 = round(num1/den[0].tot_province,2)
     result_2 = round(num2/den[0].tot_province,2)
     result_3 = round(num3/den[0].tot_province,2)
-    print(result_1)
     
     id_user1_fb = app.config['USER1_ID_FB']
     id_user2_fb = app.config['USER2_ID_FB']
@@ -203,6 +202,8 @@ def osservatorio():
     tw_post1 = cur41.fetchall()
     tw_post2 = cur51.fetchall()
     tw_post3 = cur61.fetchall()
+
+    title = 'Monitoraggio delle Elezioni Politiche Italiane'
     
     return render_template('osservatorio.html', fb_fans=fb_fans,fb_fans2=fb_fans2,fb_fans3=fb_fans3,
                            tw_fans=tw_fans,tw_fans2=tw_fans2,tw_fans3=tw_fans3, user=user,
@@ -210,4 +211,4 @@ def osservatorio():
                            id_user1_tw=id_user1_tw,id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw,
                            fb_post1=fb_post1,fb_post2=fb_post2,fb_post3=fb_post3,
                            tw_post1=tw_post1,tw_post2=tw_post2,tw_post3=tw_post3,
-                           luoghi1=result_1, luoghi2=result_2, luoghi3=result_3)
+                           luoghi1=result_1, luoghi2=result_2, luoghi3=result_3, title=title)

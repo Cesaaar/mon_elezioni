@@ -38,8 +38,10 @@ def news():
             base_d = 'http://www.monitoraggioelezioni.it/news/'
             pag_d = base_d+final_seg.replace("&", "-")
             internal_link.append(pag_d)
-    
-    return render_template('news.html', news=news, internal_link=internal_link)
+
+    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+
+    return render_template('news.html', news=news, internal_link=internal_link, title=title)
 
 @app.route('/news/<titolo>', methods=['GET'])
 def daily_post(titolo):
@@ -64,4 +66,7 @@ def daily_post(titolo):
     
     news_s = cur1.fetchall()
     
-    return render_template("news_titolo.html",news_s=news_s)
+    title = titolo.replace("_", " ")
+    title = title.replace("-", " ")
+    
+    return render_template("news_titolo.html",news_s=news_s, title=title)
