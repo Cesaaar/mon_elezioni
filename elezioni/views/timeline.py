@@ -35,29 +35,44 @@ def timeline():
     id_user2_tw = app.config['USER2_ID_TW']
     id_user3_tw = app.config['USER3_ID_TW']
     
-    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    title = 'Timeline Elezioni Politiche'
+    description = '''La timeline social mostra, in ordine cronologico, gli ultimi post Facebook e Twitter dei principali candidati in corsa alle elezioni politiche del 2018'''
+    h1 = 'Timeline social delle elezioni politiche italiane'
+    current_url = 'www.monitoraggioelezioni.it'+request.path
     
     return render_template('timeline.html',timeline=timeline,id_user1_fb=id_user1_fb,
                            id_user2_fb=id_user2_fb, id_user3_fb=id_user3_fb, id_user1_tw=id_user1_tw,
-                           id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw, title=title)
+                           id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw,
+                           title=title, description=description, h1=h1,current_url=current_url)
 
 # contatti
 @app.route('/contatti', methods=["GET"])
 def contatti():
-    title = 'Monitoraggio delle Elezioni Politiche Italiane'
-    return render_template('contatti.html', title=title)
+    title = 'Contatti Elezioni Politiche'
+    description = '''Chiarimenti e supporto in relazione al sito di monitoraggio delle elezioni politiche.'''
+    h1 = 'Contatti www.monitoraggioelezioni.it'
+    current_url = 'www.monitoraggioelezioni.it'+request.path
+    return render_template('contatti.html', title=title, description=description, h1=h1,current_url=current_url)
 
 # about
 @app.route('/about', methods=["GET"])
 def about():
-    title = 'Monitoraggio delle Elezioni Politiche Italiane'
-    return render_template('about.html',title=title)
+    title = 'About Elezioni Politiche'
+    description = '''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
+    h1 = 'About'
+    current_url = 'www.monitoraggioelezioni.it'+request.path
+    return render_template('about.html',title=title, description=description, h1=h1,
+                           current_url=current_url)
 
 # cookie policy
 @app.route('/policy', methods=["GET"])
 def policy():
-    title = 'Monitoraggio delle Elezioni Politiche Italiane'
-    return render_template('policy.html',title=title)
+    title = 'Policy Estesa'
+    description = '''Policy estesa del sito monitoraggio elezioni'''
+    h1 = 'Policy Estesa Monitoraggio Elezioni'
+    current_url = 'www.monitoraggioelezioni.it'+request.path
+    return render_template('policy.html',title=title, description=description, h1=h1,
+                           current_url=current_url)
 
 # Generate Sitemap.xml
 @app.route('/sitemap.xml', methods=["GET"])

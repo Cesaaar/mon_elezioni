@@ -1,6 +1,7 @@
 # import
 from __future__ import division
 from elezioni import app, get_db, render_template, url_for
+from flask import request
 import json
 
 # youtube page
@@ -204,6 +205,9 @@ def osservatorio():
     tw_post3 = cur61.fetchall()
 
     title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    description = '''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
+    h1 = 'Monitoraggio social e web delle elezioni politiche italiane'
+    current_url = 'www.monitoraggioelezioni.it'+request.path
     
     return render_template('osservatorio.html', fb_fans=fb_fans,fb_fans2=fb_fans2,fb_fans3=fb_fans3,
                            tw_fans=tw_fans,tw_fans2=tw_fans2,tw_fans3=tw_fans3, user=user,
@@ -211,4 +215,5 @@ def osservatorio():
                            id_user1_tw=id_user1_tw,id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw,
                            fb_post1=fb_post1,fb_post2=fb_post2,fb_post3=fb_post3,
                            tw_post1=tw_post1,tw_post2=tw_post2,tw_post3=tw_post3,
-                           luoghi1=result_1, luoghi2=result_2, luoghi3=result_3, title=title)
+                           luoghi1=result_1, luoghi2=result_2, luoghi3=result_3,
+                           title=title, description=description,h1=h1, current_url=current_url)

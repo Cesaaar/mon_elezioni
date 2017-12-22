@@ -1,5 +1,6 @@
 # import
 from elezioni import app, get_db, render_template, url_for
+from flask import request
 
 # news page
 @app.route('/news')
@@ -39,9 +40,14 @@ def news():
             pag_d = base_d+final_seg.replace("&", "-")
             internal_link.append(pag_d)
 
-    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    title = 'News Elezioni Politiche Italiane'
+    description = '''Principali news raccolte sul web associate ai candidati alle elezioni politiche oggetto di monitoraggio'''
+    h1 = 'News Web'
+    current_url = 'www.monitoraggioelezioni.it'+request.path
 
-    return render_template('news.html', news=news, internal_link=internal_link, title=title)
+    return render_template('news.html', news=news, internal_link=internal_link,
+                           title=title,description=description,h1=h1,
+                           current_url=current_url)
 
 @app.route('/news/<titolo>', methods=['GET'])
 def daily_post(titolo):
@@ -68,5 +74,9 @@ def daily_post(titolo):
     
     title = titolo.replace("_", " ")
     title = title.replace("-", " ")
+    description = '''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
+    h1 = title
+    current_url = 'www.monitoraggioelezioni.it'+request.path
     
-    return render_template("news_titolo.html",news_s=news_s, title=title)
+    return render_template("news_titolo.html",news_s=news_s, title=title, description=description,h1=h1,
+                           current_url=current_url)

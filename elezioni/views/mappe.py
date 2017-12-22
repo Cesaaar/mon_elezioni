@@ -1,5 +1,6 @@
 # import
 from elezioni import app, get_db, render_template, url_for
+from flask import request
 import json
 
 # youtube page
@@ -47,9 +48,13 @@ def mappe():
     map2 = cur2.fetchall()
     map3 = cur3.fetchall()
     
-    title = 'Monitoraggio delle Elezioni Politiche Italiane'
+    title = 'Luoghi Elezioni Politiche'
+    description = '''Monitoraggio dei luoghi associati, sul web e sui social, ai principali candidati alle elezioni politiche del 2018.'''
+    h1 = 'Luoghi associati alle elezioni politiche italiane'
+    current_url = 'www.monitoraggioelezioni.it'+request.path
     
-    return render_template('mappe.html',map1=map1, map2=map2, map3=map3, title=title)
+    return render_template('mappe.html',map1=map1, map2=map2, map3=map3,
+                           title=title, description=description, h1=h1,current_url=current_url)
 
 # json json mappa renzi
 @app.route('/mappa_pd')
