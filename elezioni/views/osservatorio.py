@@ -205,7 +205,7 @@ def osservatorio():
     tw_post3 = cur61.fetchall()
 
     title = 'Monitoraggio delle Elezioni Politiche Italiane'
-    description = '''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
+    description = u'''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
     h1 = 'Monitoraggio social e web delle elezioni politiche italiane'
     current_url = 'www.monitoraggioelezioni.it'+request.path
     
