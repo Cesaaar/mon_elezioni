@@ -1,4 +1,4 @@
-# import
+# coding=utf-8
 from elezioni import app, get_db, render_template, url_for
 from flask import request
 
