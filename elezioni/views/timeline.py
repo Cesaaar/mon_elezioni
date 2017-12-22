@@ -36,7 +36,7 @@ def timeline():
     id_user3_tw = app.config['USER3_ID_TW']
     
     title = 'Timeline Elezioni Politiche'
-    description = '''La timeline social mostra, in ordine cronologico, gli ultimi post Facebook e Twitter dei principali candidati in corsa alle elezioni politiche del 2018'''
+    description = u'''La timeline social mostra, in ordine cronologico, gli ultimi post Facebook e Twitter dei principali candidati in corsa alle elezioni politiche del 2018'''
     h1 = 'Timeline social delle elezioni politiche italiane'
     current_url = 'www.monitoraggioelezioni.it'+request.path
     
@@ -49,7 +49,7 @@ def timeline():
 @app.route('/contatti', methods=["GET"])
 def contatti():
     title = 'Contatti Elezioni Politiche'
-    description = '''Chiarimenti e supporto in relazione al sito di monitoraggio delle elezioni politiche.'''
+    description = u'''Chiarimenti e supporto in relazione al sito di monitoraggio delle elezioni politiche.'''
     h1 = 'Contatti www.monitoraggioelezioni.it'
     current_url = 'www.monitoraggioelezioni.it'+request.path
     return render_template('contatti.html', title=title, description=description, h1=h1,current_url=current_url)
@@ -58,7 +58,7 @@ def contatti():
 @app.route('/about', methods=["GET"])
 def about():
     title = 'About Elezioni Politiche'
-    description = '''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
+    description = u'''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
     h1 = 'About'
     current_url = 'www.monitoraggioelezioni.it'+request.path
     return render_template('about.html',title=title, description=description, h1=h1,
@@ -68,7 +68,7 @@ def about():
 @app.route('/policy', methods=["GET"])
 def policy():
     title = 'Policy Estesa'
-    description = '''Policy estesa del sito monitoraggio elezioni'''
+    description = u'''Policy estesa del sito monitoraggio elezioni'''
     h1 = 'Policy Estesa Monitoraggio Elezioni'
     current_url = 'www.monitoraggioelezioni.it'+request.path
     return render_template('policy.html',title=title, description=description, h1=h1,
