@@ -72,10 +72,11 @@ def daily_post(titolo):
     
     news_s = cur1.fetchall()
     
-    title = titolo.replace("_", " ")
-    title = title.replace("-", " ")
+    #title = titolo.replace("_", " ")
+    #title = title.replace("-", " ")
+    title=news_s[0].titolo
     description = u'''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
-    h1 = title
+    h1 = news_s[0].titolo
     current_url = 'www.monitoraggioelezioni.it'+request.path
     
     return render_template("news_titolo.html",news_s=news_s, title=title, description=description,h1=h1,
