@@ -28,6 +28,7 @@ def news():
     
     news = cur.fetchall()
     
+    news2 = []
     internal_link = []
     for n in news:
         url = n.url
@@ -39,7 +40,9 @@ def news():
             base_d = 'http://www.monitoraggioelezioni.it/news/'
             pag_d = base_d+final_seg.replace("&", "-")
             internal_link.append(pag_d)
+            news2.append(n)
 
+    news=news2
     title = 'News Elezioni Politiche Italiane'
     description = u'''Principali news raccolte sul web associate ai candidati alle elezioni politiche oggetto di monitoraggio'''
     h1 = 'News Web'
