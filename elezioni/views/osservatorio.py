@@ -207,7 +207,7 @@ def osservatorio():
     title = 'Monitoraggio delle Elezioni Politiche Italiane'
     description = u'''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
     h1 = 'Monitoraggio social e web delle elezioni politiche italiane'
-    current_url = 'www.monitoraggioelezioni.it'
+    current_url = 'http://www.monitoraggioelezioni.it/'
     
     return render_template('osservatorio.html', fb_fans=fb_fans,fb_fans2=fb_fans2,fb_fans3=fb_fans3,
                            tw_fans=tw_fans,tw_fans2=tw_fans2,tw_fans3=tw_fans3, user=user,
