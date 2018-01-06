@@ -78,7 +78,7 @@ def daily_post(titolo):
     #title = titolo.replace("_", " ")
     #title = title.replace("-", " ")
     title=news_s[0].titolo
-    description = u'''Monitoraggio del web e dei social dei principali politici italiani, in occasione delle elezioni politiche 2018. Il monitoraggio è apartitico ed è realizzato secondo criteri di trasparenza, sia nella lettura delle fonti che nella sintesi degli indicatori.'''
+    description = news_s[0].descrizione
     h1 = news_s[0].titolo
     current_url = 'www.monitoraggioelezioni.it'+request.path
     
