@@ -36,6 +36,7 @@ from elezioni.views import twitter
 from elezioni.views import news
 from elezioni.views import mappe
 from elezioni.views import osservatorio
+from elezioni.views import cerca
 
 """ UTILS """
 
@@ -44,4 +45,11 @@ def _jinja2_filter_datetime(date, fmt=None):
     date = dateutil.parser.parse(date)
     native = date.replace(tzinfo=None)
     format='%d %b %Y, %-H:%-M'
+    return native.strftime(format)
+
+@app.template_filter('strftime2')
+def _jinja2_filter_datetime(date, fmt=None):
+    date = dateutil.parser.parse(date)
+    native = date.replace(tzinfo=None)
+    format='%d %b %Y'
     return native.strftime(format)

@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+{% block body %}
+
+		<!-- Page content -->
+		<div class="page-content">
+		
+			<!-- Main content -->
+			<div class="content-wrapper">
+                
+                <!-- Search field -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Ricerca Argomento</h5>
+                    </div>
+                
+                    <div class="panel-body">
+                        <form action = "{{ url_for('cerca', user=user)}}" method = "POST" class="main-search">
+                            <div class="input-group content-group">
+                                <div class="has-feedback has-feedback-left">
+                                    <input name="text" class="form-control input-xlg" value="{{result}}">
+                                        <div class="form-control-feedback">
+                                            <i class="icon-search4 text-muted text-size-base"></i>
+                                        </div>
+                                        </div>
+                                
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary btn-xlg">Search</button>
+                                </div>
+                            </div>
+                        
+                        </form>
+                        <small>Esempio di Ricerca: IMU, Pensioni, TARI, Pensioni Minime, etc.</small>
+                    </div>
+                </div>
+                <!-- /Search field -->
+                
+                <!-- Tabs -->
+                <ul class="nav nav-lg nav-tabs nav-tabs-bottom search-results-tabs">
+                    <li class="active" id="tab1"><a href="{{ url_for('cerca',user='Renzi')}}"><i class="icon-display4 position-left"></i>Renzi</a></li>
+                    <li id="tab2"><a href="{{ url_for('cerca', user='Di Maio')}}"><i class="icon-display4 position-left"></i>Di Maio</a></li>
+                    <li id="tab3"><a href="{{ url_for('cerca', user='Berlusconi')}}"><i class="icon-display4 position-left"></i>Berlusconi</a></li>
+                </ul>
+                <!-- /tabs -->
+                
+                <!-- Search results -->
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="panel panel-body">
+                            <p class="text-muted text-size-small">Ottenuti {{news|length}} risultati</p>
+                            
+                            <hr>
+                            
+                            {% if news|length > 0 %}
+                            <ul class="media-list search-results-list content-group">
+                                {% for n in news %}
+                                <li class="media">
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="{{n.url}}" target='_blank'>{{n.titolo}}</a></h6>
+                                        <ul class="list-inline list-inline-separate text-muted">
+                                            {% if n.fonte=='News' %}
+                                            <li><i class="icon-feed2"></i></li>
+                                            <li><strong>{{n.fonte}}</strong></li>
+                                            <li>{{n.data|strftime2}}</li>
+                                            
+                                            {% elif n.fonte=='Facebook' %}
+                                            <li><i class="icon-facebook2"></i></li>
+                                            <li><strong>{{n.fonte}}</strong></li>
+                                            <li>{{n.data|strftime2}}</li>
+                                            
+                                            {% elif n.fonte=='Twitter' %}
+                                            <li><i class="icon-twitter2"></i></li>
+                                            <li><strong>{{n.fonte}}</strong></li>
+                                            <li>{{n.data|strftime2}}</li>
+                                            {% endif %}
+                                        </ul>
+                                        
+                                        {{n.descrizione}}
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                
+                            </ul>
+                            
+                            <hr>
+                            
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="panel panel-flat">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-fe+6a+31-k2+pr"
+                                data-ad-client="ca-pub-6362347303628164"
+                                data-ad-slot="3048645493"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                        
+                <!-- /Search results -->
+
+			</div>
+			<!-- /main content -->
+			
+		</div>
+		<!-- /Page content -->
+
+    <script>
+    if("{{user}}"=='Renzi'){
+        document.getElementById("tab1").setAttribute('class', "active");
+    } else if ("{{user}}"=='Di Maio') {
+        document.getElementById("tab2").setAttribute('class', "active");
+        document.getElementById("tab1").setAttribute('class', "inactive");
+    } else if ("{{user}}"=='Berlusconi') {
+        document.getElementById("tab3").setAttribute('class', "active");
+        document.getElementById("tab1").setAttribute('class', "inactive");
+    }
+    document.getElementById("link6").setAttribute('class', "active");
+    document.getElementById("link_home").innerHTML = "Cerca";
+    </script>
+
+{% endblock %}
