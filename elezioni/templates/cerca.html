@@ -129,6 +129,8 @@
         var instance = new Mark(document.querySelector("#searchtext"));
         result = "{{result}}";
         result = result.replace(new RegExp("&amp;","g")," ");
+        result = result.replace(new RegExp("&#39;&#39;","g"),"'");
+        result = result.replace(new RegExp("''","g"),"'");
         instance.mark([result], {
                       accuracy: "partially",
                       separateWordSearch: false,

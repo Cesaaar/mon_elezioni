@@ -20,7 +20,7 @@ def cerca():
 
     if(request.method == 'POST'):
         result = request.form['text']
-        result = result.replace("'", " ")
+        result = result.replace("'", "''")
         result = result.replace(" ", "&")
         engine = get_db()
 
@@ -63,9 +63,12 @@ def cerca():
         result=request.args.get('search')
         if not result:
             result=''
-        engine = get_db()
-        
-        cur = engine.execute(
+            news = []
+            return render_template('cerca.html',title=title, description=description, h1=h1,
+                                   current_url=current_url,user=user, result=result, news=news)
+        else:
+            engine = get_db()
+            cur = engine.execute(
                              '''
                                  select *
                                  from (
@@ -97,6 +100,6 @@ def cerca():
                                                          ) a order by data desc
                                                          ''')
         
-        news = cur.fetchall()
-        return render_template('cerca.html',title=title, description=description, h1=h1,
+            news = cur.fetchall()
+            return render_template('cerca.html',title=title, description=description, h1=h1,
                            current_url=current_url,user=user, result=result, news=news)
