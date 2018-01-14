@@ -26,21 +26,7 @@ def cerca():
         cur = engine.execute(
         '''
             select *
-            from (
-              SELECT
-              titolo as titolo
-              ,"desc" as descrizione
-              ,cast(max(dt_rif) as text) as data
-              ,url as url
-              ,"user" as utente
-              ,'News' as fonte
-              FROM ''' + app.config['SCHEMA_ELE'] + '''."news"
-              WHERE to_tsvector(titolo || '. ' || 'desc') @@ to_tsquery(''' "'"+result+"'" ''')
-              AND "user" = ''' "'"+user+"'" '''
-              group by titolo,"desc",url,"user"
-              
-              UNION ALL
-              
+            from (              
               SELECT
               substring(msg from 0 for 100) as titolo
               ,msg as descrizione
@@ -73,5 +59,43 @@ def cerca():
         return render_template('cerca.html',result = result,title=title, description=description, h1=h1,
                                    current_url=current_url, news=news, user=user)
     else:
+        result=request.args.get('search')
+        if not result:
+            result=''
+        engine = get_db()
+        
+        cur = engine.execute(
+                             '''
+                                 select *
+                                 from (
+                                 SELECT
+                                 substring(msg from 0 for 100) as titolo
+                                 ,msg as descrizione
+                                 ,cast(max(dt_rif) as text) as data
+                                 ,'http://www.facebook.com/'||id_post as url
+                                 ,"user" as utente
+                                 ,'Facebook' as fonte
+                                 FROM ''' + app.config['SCHEMA_ELE'] + '''."fb_posts"
+                                     WHERE to_tsvector(msg) @@ to_tsquery(''' "'"+result+"'" ''')
+                                         AND "user" = ''' "'"+user+"'" '''
+                                             group by substring(msg from 0 for 100),msg,id_post,"user"
+                                             
+                                             UNION ALL
+                                             
+                                             SELECT
+                                             substring(msg from 0 for 100) as titolo
+                                             ,msg as descrizione
+                                             ,cast(max(dt_rif) as text) as data
+                                             ,'http://www.twitter.com/anyuser/status/'||cast(id_post as text) as url
+                                             ,"user" as utente
+                                             ,'Twitter' as fonte
+                                             FROM ''' + app.config['SCHEMA_ELE'] + '''."tw_posts"
+                                                 WHERE to_tsvector(msg) @@ to_tsquery(''' "'"+result+"'" ''')
+                                                     AND "user" = ''' "'"+user+"'" '''
+                                                         group by substring(msg from 0 for 100),msg,id_post,"user"
+                                                         ) a order by data desc
+                                                         ''')
+        
+        news = cur.fetchall()
         return render_template('cerca.html',title=title, description=description, h1=h1,
-                           current_url=current_url,user=user)
+                           current_url=current_url,user=user, result=result, news=news)
