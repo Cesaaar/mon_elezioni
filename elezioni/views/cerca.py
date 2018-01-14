@@ -20,6 +20,7 @@ def cerca():
 
     if(request.method == 'POST'):
         result = request.form['text']
+        result = result.replace("'", " ")
         result = result.replace(" ", "&")
         engine = get_db()
 

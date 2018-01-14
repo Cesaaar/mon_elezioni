@@ -17,7 +17,7 @@
                         <form action = "{{ url_for('cerca', user=user)}}" method = "POST" class="main-search">
                             <div class="input-group content-group">
                                 <div class="has-feedback has-feedback-left">
-                                    <input name="text" type="text" class="form-control input-xlg" value="{{result}}" placeholder="Pensioni">
+                                    <input name="text" type="text" class="form-control input-xlg" value="{{result}}" placeholder="Es. Pensioni, IMU, Reddito di dignità, 80 euro, etc.">
                                         <div class="form-control-feedback">
                                             <i class="icon-search4 text-muted text-size-base"></i>
                                         </div>
@@ -54,7 +54,7 @@
                                 {% for n in news %}
                                 <li class="media">
                                     <div class="media-body">
-                                        <h6 class="media-heading"><a href="{{n.url}}" target='_blank'>{{n.titolo}}</a></h6>
+                                        <h6 class="media-heading"><a href="{{n.url}}" target='_blank' id='h6'>{{n.titolo}}</a></h6>
                                         <ul class="list-inline list-inline-separate text-muted">
                                             {% if n.fonte=='News' %}
                                             <li><i class="icon-feed2"></i></li>
@@ -128,14 +128,16 @@
     <script>
         var instance = new Mark(document.querySelector("#searchtext"));
         result = "{{result}}";
-        result = result.replace("&amp;"," ");
-        console.log(result);
+        result = result.replace(new RegExp("&amp;","g")," ");
         instance.mark([result], {
-                      accuracy: "exactly",
+                      accuracy: "partially",
                       separateWordSearch: false,
+                      ignorePunctuation: [",", "."],
+                      exclude: ["#h6"],
+                      wildcards: "disabled"
                       });
                       
-        //$('mark').css({'background':'transparent' , 'color':'red'});
+        $('mark').css({'background':'yellow' , 'color':'black'});
     </script>
 
 {% endblock %}
