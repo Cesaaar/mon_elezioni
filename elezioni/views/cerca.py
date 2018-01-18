@@ -3,6 +3,7 @@ from elezioni import app, get_db, render_template, url_for
 from flask import jsonify, send_from_directory, request, make_response
 import json
 import os
+import re
 from datetime import datetime, date, time, timedelta
 from jinja2 import Environment, FileSystemLoader
 
@@ -19,7 +20,8 @@ def cerca():
         user='Renzi'
 
     if(request.method == 'POST'):
-        result = request.form['text']
+        result = request.form['text'].lstrip().rstrip()
+        result = re.sub(' +',' ',result)
         result = result.replace("'", "''")
         result = result.replace(" ", "&")
         engine = get_db()
