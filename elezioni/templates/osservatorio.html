@@ -14,15 +14,18 @@
                             <small class="display-block">
                                 <h6>
                                     <p style="text-align: left;">L'osservatorio intende monitorare la <strong>visibilit&agrave; social</strong> e <strong>web&nbsp;</strong>dei principali <strong>candidati politici</strong> alle elezioni italiane del 2018. L'attuale legge sulla <a href="https://it.wikipedia.org/wiki/Par_condicio" target="_blank">par condicio</a>&nbsp;pone specifici limiti agli interventi politici in televisione, ma non presta troppa attenzione all'evoluzione delle campagne politiche sui social e, in generale, sul mondo del web.&nbsp;</p>
-                                    <p style="text-align: left;">Il monitoraggio &egrave; <strong>apartitico</strong> ed &egrave; realizzato secondo <strong>criteri di trasparenza</strong> sia nella lettura delle fonti che nella sintesi degli indicatori. Il <strong>codice</strong> e gli <strong>algoritmi</strong> per il trattamento dei dati sono pubblicati in maniera open source su github. Per saperne di pi&ugrave; visita la pagina <a href="http://www.monitoraggioelezioni.it/about" target="_blank" rel="noopener">about</a>, buona navigazione.</p>
+                                    <p style="text-align: left;">Il monitoraggio è stato realizzato dal 1 Novembre 2017 al 3 Marzo 2018.
+                                    </p>
                                 </h6>
                             </small>
                         </h2>
+                        <!--
                         <div style="float:right">
                             <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
                         </div>
                         <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.monitoraggioelezioni.it&layout=button&size=small&mobile_iframe=true&appId=165415010725423&width=79&height=20" width="79" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" align="right">
                         </iframe>
+                        !-->
                     </div>
                 </div>
 			
@@ -192,7 +195,7 @@
                             {% elif u=='Di Maio' %}
                             <img src="{{ url_for('static', filename='assets/images/wordcloud_dimaio.png') }}" alt="Word Cloud">
                             {% elif u=='Berlusconi' %}
-                            <img src="{{ url_for('static', filename='assets/images/wordcloud_berlusconi.png') }}" alt="Word Cloud">
+                            <img src="{{ url_for('static', filename='assets/images/wordcloud_Berlusconi.png') }}" alt="Word Cloud">
                             {% endif %}
                         </div>
                         <ul class="list-inline list-inline-separate heading-text text-muted">
@@ -225,7 +228,8 @@
                     </div>
                     <!-- /Copertura Luoghi-->
                     
-                    <!-- Pubblicità -->
+                    <!-- Pubblicità
+
                     <div class="thumbnail">
                         <div class="thumb">
                             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -240,7 +244,8 @@
                                 </script>
                         </div>
                     </div>
-                     <!-- /Pubblicità -->
+
+                     /Pubblicità -->
                     
                 </div>
                 {% endfor %}

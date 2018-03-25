@@ -177,11 +177,11 @@ def osservatorio():
     
     id_user1_fb = app.config['USER1_ID_FB']
     id_user2_fb = app.config['USER2_ID_FB']
-    id_user3_fb = app.config['USER3_ID_FB']
+    id_USER3_fb = app.config['USER3_ID_FB']
     
     id_user1_tw = app.config['USER1_ID_TW']
     id_user2_tw = app.config['USER2_ID_TW']
-    id_user3_tw = app.config['USER3_ID_TW']
+    id_USER3_tw = app.config['USER3_ID_TW']
     
     user = []
     user.append(app.config['USER1'])
@@ -211,8 +211,8 @@ def osservatorio():
     
     return render_template('osservatorio.html', fb_fans=fb_fans,fb_fans2=fb_fans2,fb_fans3=fb_fans3,
                            tw_fans=tw_fans,tw_fans2=tw_fans2,tw_fans3=tw_fans3, user=user,
-                           id_user1_fb=id_user1_fb, id_user2_fb=id_user2_fb, id_user3_fb=id_user3_fb,
-                           id_user1_tw=id_user1_tw,id_user2_tw=id_user2_tw, id_user3_tw=id_user3_tw,
+                           id_user1_fb=id_user1_fb, id_user2_fb=id_user2_fb, id_USER3_fb=id_USER3_fb,
+                           id_user1_tw=id_user1_tw,id_user2_tw=id_user2_tw, id_USER3_tw=id_USER3_tw,
                            fb_post1=fb_post1,fb_post2=fb_post2,fb_post3=fb_post3,
                            tw_post1=tw_post1,tw_post2=tw_post2,tw_post3=tw_post3,
                            luoghi1=result_1, luoghi2=result_2, luoghi3=result_3,
