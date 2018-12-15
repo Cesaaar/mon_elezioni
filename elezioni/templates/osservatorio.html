@@ -54,13 +54,13 @@
                                 <span class="text-default" target='_blank'>Luigi Di Maio</span>
                                 <small class="display-block">Movimento 5 Stelle</small>
                             </h6>
-                            {% elif u=='Berlusconi' %}
+                            {% elif u=='Salvini' %}
                             <span class="display-inline-block">
-                                <img src="{{ url_for('static', filename='assets/images/Silvio.jpg') }}" class="img-circle img-responsive" alt="Silvio Berlusconi" style="width: 120px; height: 120px;">
+                                <img src="{{ url_for('static', filename='assets/images/Salvini.jpg') }}" class="img-circle img-responsive" alt="Matteo Salvini" style="width: 120px; height: 120px;">
                             </span>
                             <h6 class="text-semibold no-margin-bottom">
-                                <span class="text-default" target='_blank'>Silvio Berlusconi</span>
-                                <small class="display-block">Forza Italia</small>
+                                <span class="text-default" target='_blank'>Matteo Salvini</span>
+                                <small class="display-block">Lega</small>
                             </h6>
                             {% endif %}
                         </div>
@@ -75,7 +75,7 @@
                                 <a href="https://www.facebook.com/{{id_user1_fb}}" target='_blank'><i class="icon-facebook2 icon-2x text-primary"></i></a>
                                 {% elif u=='Di Maio' %}
                                 <a href="https://www.facebook.com/{{id_user2_fb}}" target='_blank'><i class="icon-facebook2 icon-2x text-primary"></i></a>
-                                {% elif u=='Berlusconi' %}
+                                {% elif u=='Salvini' %}
                                 <a href="https://www.facebook.com/{{id_user3_fb}}" target='_blank'><i class="icon-facebook2 icon-2x text-primary"></i></a>
                                 {% endif %}
                             </div>
@@ -84,7 +84,7 @@
                                 <h3 class="no-margin text-semibold">{{"{:,}".format(fb_fans[0].fb_fans)}}</h3>
                                 {% elif u=='Di Maio' %}
                                 <h3 class="no-margin text-semibold">{{"{:,}".format(fb_fans2[0].fb_fans)}}</h3>
-                                {% elif u=='Berlusconi' %}
+                                {% elif u=='Salvini' %}
                                 <h3 class="no-margin text-semibold">{{"{:,}".format(fb_fans3[0].fb_fans)}}</h3>
                                 {% endif %}
                                 <span class="text-uppercase text-size-mini text-muted">Facebook Fans</span>
@@ -97,7 +97,7 @@
                         <div id="monthly-sales-stats1"></div>
                         {% elif u=='Di Maio' %}
                         <div id="monthly-sales-stats2"></div>
-                        {% elif u=='Berlusconi' %}
+                        {% elif u=='Salvini' %}
                         <div id="monthly-sales-stats3"></div>
                         {% endif %}
                         <!-- /basic area chart -->
@@ -108,7 +108,7 @@
                             <i class="icon-bubbles2 text-size-base text-pink position-left"> {{fb_post1[0].post_day | round(1)}}</i>- Media post giornalieri
                             {% elif u=='Di Maio' %}
                             <i class="icon-bubbles2 text-size-base text-pink position-left"> {{fb_post2[0].post_day | round(1)}}</i>- Media post giornalieri
-                            {% elif u=='Berlusconi' %}
+                            {% elif u=='Salvini' %}
                             <i class="icon-bubbles2 text-size-base text-pink position-left"> {{fb_post3[0].post_day | round(1)}}</i>- Media post giornalieri
                             {% endif %}
                         </div>
@@ -117,7 +117,7 @@
                             <i class="icon-heart6 text-size-base text-pink position-left"> {{fb_post1[0].likes_day | round}}</i>- Media likes giornalieri
                             {% elif u=='Di Maio' %}
                             <i class="icon-heart6 text-size-base text-pink position-left"> {{fb_post2[0].likes_day | round}}</i>- Media likes giornalieri
-                            {% elif u=='Berlusconi' %}
+                            {% elif u=='Salvini' %}
                             <i class="icon-heart6 text-size-base text-pink position-left"> {{fb_post3[0].likes_day | round}}</i>- Media likes giornalieri
                             {% endif %}
                         </div>
@@ -134,7 +134,7 @@
                                 <a href="https://twitter.com/{{id_user1_tw}}" target='_blank'><i class="icon-twitter2 icon-2x text-primary"></i></a>
                                 {% elif u=='Di Maio' %}
                                 <a href="https://twitter.com/{{id_user2_tw}}" target='_blank'><i class="icon-twitter2 icon-2x text-primary"></i></a>
-                                {% elif u=='Berlusconi' %}
+                                {% elif u=='Salvini' %}
                                 <a href="https://twitter.com/{{id_user3_tw}}" target='_blank'><i class="icon-twitter2 icon-2x text-primary"></i></a>
                                 {% endif %}
                             </div>
@@ -143,7 +143,7 @@
                                 <h3 class="no-margin text-semibold">{{"{:,}".format(tw_fans[0].tw_fans)}}</h3>
                                 {% elif u=='Di Maio' %}
                                 <h3 class="no-margin text-semibold">{{"{:,}".format(tw_fans2[0].tw_fans)}}</h3>
-                                {% elif u=='Berlusconi' %}
+                                {% elif u=='Salvini' %}
                                 <h3 class="no-margin text-semibold">{{"{:,}".format(tw_fans3[0].tw_fans)}}</h3>
                                 {% endif %}
                                 <span class="text-uppercase text-size-mini text-muted">Twitter Fans</span>
@@ -156,7 +156,7 @@
                         <div id="monthly-tw-stats1"></div>
                         {% elif u=='Di Maio' %}
                         <div id="monthly-tw-stats2"></div>
-                        {% elif u=='Berlusconi' %}
+                        {% elif u=='Salvini' %}
                         <div id="monthly-tw-stats3"></div>
                         {% endif %}
                         <!-- /basic area chart -->
@@ -167,7 +167,7 @@
                             <i class="icon-bubbles2 text-size-base text-pink position-left"> {{tw_post1[0].post_day | round(1)}}</i>- Media tweet giornalieri
                             {% elif u=='Di Maio' %}
                             <i class="icon-bubbles2 text-size-base text-pink position-left"> {{tw_post2[0].post_day | round(1)}}</i>- Media tweet giornalieri
-                            {% elif u=='Berlusconi' %}
+                            {% elif u=='Salvini' %}
                             <i class="icon-bubbles2 text-size-base text-pink position-left"> {{tw_post3[0].post_day | round(1)}}</i>- Media tweet giornalieri
                             {% endif %}
                         </div>
@@ -176,7 +176,7 @@
                             <i class="icon-heart6 text-size-base text-pink position-left"> {{tw_post1[0].likes_day | round}}</i>- Media likes giornalieri
                             {% elif u=='Di Maio' %}
                             <i class="icon-heart6 text-size-base text-pink position-left"> {{tw_post2[0].likes_day | round}}</i>- Media likes giornalieri
-                            {% elif u=='Berlusconi' %}
+                            {% elif u=='Salvini' %}
                             <i class="icon-heart6 text-size-base text-pink position-left"> {{tw_post3[0].likes_day | round}}</i>- Media likes giornalieri
                             {% endif %}
                         </div>
@@ -194,8 +194,8 @@
                             <img src="{{ url_for('static', filename='assets/images/wordcloud_renzi.png') }}" alt="Word Cloud">
                             {% elif u=='Di Maio' %}
                             <img src="{{ url_for('static', filename='assets/images/wordcloud_dimaio.png') }}" alt="Word Cloud">
-                            {% elif u=='Berlusconi' %}
-                            <img src="{{ url_for('static', filename='assets/images/wordcloud_berlusconi.png') }}" alt="Word Cloud">
+                            {% elif u=='Salvini' %}
+                            <img src="{{ url_for('static', filename='assets/images/wordcloud_salvini.png') }}" alt="Word Cloud">
                             {% endif %}
                         </div>
                         <ul class="list-inline list-inline-separate heading-text text-muted">
@@ -212,7 +212,7 @@
                         <div class="text-size-small text-muted content-group-sm" id="luoghi1" data-luoghi1="{{luoghi1}}"></div>
                         {% elif u=='Di Maio' %}
                         <div class="text-size-small text-muted content-group-sm" id="luoghi2" data-luoghi2="{{luoghi2}}"></div>
-                        {% elif u=='Berlusconi' %}
+                        {% elif u=='Salvini' %}
                         <div class="text-size-small text-muted content-group-sm" id="luoghi3" data-luoghi3="{{luoghi3}}"></div>
                         {% endif %}
                         
@@ -220,7 +220,7 @@
                         <div class="svg-center" id="segmented_gauge"></div>
                         {% elif u=='Di Maio' %}
                         <div class="svg-center" id="segmented_gauge_2"></div>
-                        {% elif u=='Berlusconi' %}
+                        {% elif u=='Salvini' %}
                         <div class="svg-center" id="segmented_gauge_3"></div>
                         {% endif %}
                         

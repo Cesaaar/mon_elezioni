@@ -32,8 +32,8 @@
                         <div class="timeline-row post-even">
                         {% endif %}
                         <div class="timeline-icon">
-                            {% if t.utente=='Berlusconi' %}
-                            <img src="{{ url_for('static', filename='assets/images/Silvio.jpg') }}" alt="Silvio Berlusconi">
+                            {% if t.utente=='Salvini' %}
+                            <img src="{{ url_for('static', filename='assets/images/Salvini.jpg') }}" alt="Matteo Salvini">
                             {% elif t.utente=='Renzi' %}
                             <img src="{{ url_for('static', filename='assets/images/Renzi.jpg') }}" alt="Matteo Renzi">
                             {% elif t.utente=='Di Maio' %}
@@ -80,7 +80,7 @@
                                     </ul>
                                     <span class="heading-btn pull-right">
                                         {% if t.sorgente=='twitter'%}
-                                            {% if t.utente=='Berlusconi' %}
+                                            {% if t.utente=='Salvini' %}
                                             <a href="https://twitter.com/{{id_user3_tw}}" target='_blank' class="btn btn-link">vai al tweet <i class="icon-arrow-right14 position-right"></i></a>
                                             {% elif t.utente=='Di Maio' %}
                                             <a href="https://twitter.com/{{id_user2_tw}}" target='_blank' class="btn btn-link">vai al tweet <i class="icon-arrow-right14 position-right"></i></a>
@@ -88,7 +88,7 @@
                                             <a href="https://twitter.com/{{id_user1_tw}}" target='_blank' class="btn btn-link">vai al tweet <i class="icon-arrow-right14 position-right"></i></a>
                                             {% endif %}
                                         {% elif t.sorgente=='facebook'%}
-                                            {% if t.utente=='Berlusconi' %}
+                                            {% if t.utente=='Salvini' %}
                                             <a href="https://www.facebook.com/{{id_user3_fb}}" target='_blank' class="btn btn-link">vai al post <i class="icon-arrow-right14 position-right"></i></a>
                                             {% elif t.utente=='Di Maio' %}
                                             <a href="https://www.facebook.com/{{id_user2_fb}}" target='_blank' class="btn btn-link">vai al post <i class="icon-arrow-right14 position-right"></i></a>

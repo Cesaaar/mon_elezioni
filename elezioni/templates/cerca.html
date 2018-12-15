@@ -37,7 +37,7 @@
                 <ul class="nav nav-lg nav-tabs nav-tabs-bottom search-results-tabs">
                     <li class="active" id="tab1"><a href="{{ url_for('cerca',user='Renzi',search=result)}}"><i class="icon-display4 position-left"></i>Renzi</a></li>
                     <li id="tab2"><a href="{{ url_for('cerca', user='Di Maio',search=result)}}"><i class="icon-display4 position-left"></i>Di Maio</a></li>
-                    <li id="tab3"><a href="{{ url_for('cerca', user='Berlusconi',search=result)}}"><i class="icon-display4 position-left"></i>Berlusconi</a></li>
+                    <li id="tab3"><a href="{{ url_for('cerca', user='Salvini',search=result)}}"><i class="icon-display4 position-left"></i>Salvini</a></li>
                 </ul>
                 <!-- /tabs -->
                 
@@ -103,7 +103,7 @@
     } else if ("{{user}}"=='Di Maio') {
         document.getElementById("tab2").setAttribute('class', "active");
         document.getElementById("tab1").setAttribute('class', "inactive");
-    } else if ("{{user}}"=='Berlusconi') {
+    } else if ("{{user}}"=='Salvini') {
         document.getElementById("tab3").setAttribute('class', "active");
         document.getElementById("tab1").setAttribute('class', "inactive");
     }
