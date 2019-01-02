@@ -12,18 +12,9 @@ Monitoraggio dei principali partecipanti alle elezioni politiche italiane del 20
 ```
 git clone https://github.com/Cesaaar/mon_elezioni.git
 
-source venv/bin/activate
-export SETTINGS=~/Documents/opendata/config.py
-python runserver.py
+docker build -t app .
 
-or
-
-nohup python runserver.py &
-
-or
-
-gunicorn -c config_gunicorn.py elezioni:app
-
+docker-compose up -d
 ```
 
 ### config.py ###
